@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const icon = themeToggle.querySelector('i');
             if (icon) {
                 if (theme === 'dark') {
-                    icon.className = 'fa-solid fa-sun';
+                    icon.className = 'fa-regular fa-sun';
                 } else {
                     icon.className = 'fa-solid fa-moon';
                 }
