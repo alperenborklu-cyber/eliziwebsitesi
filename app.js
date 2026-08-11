@@ -229,5 +229,45 @@ document.addEventListener('DOMContentLoaded', () => {
                 }, 2500);
             });
         }
-    }
+
+        // --- Reviews Carousel ---
+        const reviewSlides = document.querySelectorAll('.review-slide');
+        const reviewDots = document.querySelectorAll('.reviews-dots .dot');
+        let currentReviewIndex = 0;
+        let reviewInterval;
+
+        function showReview(index) {
+            if (reviewSlides.length === 0) return;
+            reviewSlides.forEach(slide => slide.classList.remove('active'));
+            reviewDots.forEach(dot => dot.classList.remove('active'));
+
+            currentReviewIndex = (index + reviewSlides.length) % reviewSlides.length;
+            reviewSlides[currentReviewIndex].classList.add('active');
+            reviewDots[currentReviewIndex].classList.add('active');
+        }
+
+        function nextReview() {
+            showReview(currentReviewIndex + 1);
+        }
+
+        function startReviewInterval() {
+            if (reviewSlides.length === 0) return;
+            reviewInterval = setInterval(nextReview, 5000);
+        }
+
+        function resetReviewInterval() {
+            clearInterval(reviewInterval);
+            startReviewInterval();
+        }
+
+        if (reviewDots.length > 0) {
+            reviewDots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    showReview(index);
+                    resetReviewInterval();
+                });
+            });
+        }
+
+        startReviewInterval();
 });

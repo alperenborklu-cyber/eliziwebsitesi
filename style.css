@@ -894,6 +894,104 @@ h1, h2, h3, h4, h5, h6 {
     border: 1px solid var(--border-light);
 }
 
+/* --- Reviews Slider Section --- */
+.reviews-slider-section {
+    padding: 80px 0 60px;
+    background-color: var(--bg-primary);
+    text-align: center;
+    border-top: 1px solid var(--border-light);
+}
+
+.reviews-header {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.reviews-stars {
+    color: #ffc107;
+    font-size: 1.25rem;
+    display: flex;
+    gap: 6px;
+}
+
+.reviews-header h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    font-family: var(--font-heading);
+    letter-spacing: 0.05em;
+    color: var(--text-primary);
+}
+
+.reviews-carousel {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 140px;
+}
+
+.review-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.6s ease;
+}
+
+.review-slide.active {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+}
+
+.review-text {
+    font-size: 1.35rem;
+    font-style: italic;
+    color: var(--text-primary);
+    font-weight: 300;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    letter-spacing: 0.01em;
+}
+
+.review-author {
+    font-weight: 500;
+    color: var(--accent);
+    font-size: 1.05rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    display: block;
+}
+
+.reviews-dots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.reviews-dots .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--border-light);
+    cursor: pointer;
+    transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s ease;
+}
+
+.reviews-dots .dot:hover {
+    transform: scale(1.2);
+}
+
+.reviews-dots .dot.active {
+    background-color: var(--accent);
+    transform: scale(1.2);
+}
+
 /* --- Full Width Map Section --- */
 .full-width-map {
     width: 100%;
@@ -1621,6 +1719,16 @@ h1, h2, h3, h4, h5, h6 {
     }
     .full-width-map {
         height: 350px;
+    }
+    .reviews-slider-section {
+        padding: 50px 0 40px;
+    }
+    .reviews-header h3 {
+        font-size: 1.5rem;
+    }
+    .review-text {
+        font-size: 1.1rem;
+        padding: 0 15px;
     }
     .hero-title {
         font-size: 2.6rem;
