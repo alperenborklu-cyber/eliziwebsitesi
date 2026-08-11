@@ -565,7 +565,7 @@ document.addEventListener('DOMContentLoaded', () => {
             preloader.classList.add('fade-out');
             setTimeout(() => {
                 preloader.remove();
-            }, 800);
+            }, 1300);
         }
     };
 
