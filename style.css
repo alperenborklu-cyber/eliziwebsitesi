@@ -2075,7 +2075,7 @@ body.dark-theme .experience-badge .text {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), visibility 0.8s;
+    transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), visibility 1.2s;
 }
 
 .preloader.fade-out {
@@ -2100,7 +2100,7 @@ body.dark-theme .experience-badge .text {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: rotateRoom 6s linear infinite;
+    animation: rotateRoom 9s linear infinite;
 }
 
 .preloader-icon {
@@ -2110,7 +2110,7 @@ body.dark-theme .experience-badge .text {
 
 /* Counter-rotate icon so it stays upright while the room outline rotates */
 .room-outline .preloader-icon {
-    animation: pulseCouch 2s cubic-bezier(0.4, 0, 0.6, 1) infinite, counterRotate 6s linear infinite;
+    animation: pulseCouch 3s cubic-bezier(0.4, 0, 0.6, 1) infinite, counterRotate 9s linear infinite;
 }
 
 .preloader-brand {
@@ -2133,7 +2133,7 @@ body.dark-theme .experience-badge .text {
     width: 0%;
     height: 100%;
     background-color: var(--accent);
-    animation: loadProgress 2.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    animation: loadProgress 3.3s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
 @keyframes rotateRoom {
