@@ -697,6 +697,17 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 5px;
 }
 
+/* Dark theme overrides for experience badge */
+body.dark-theme .experience-badge {
+    color: #111111;
+}
+body.dark-theme .experience-badge .years {
+    color: #111111;
+}
+body.dark-theme .experience-badge .text {
+    color: #5d4037;
+}
+
 .craftsmanship-text-area {
     flex: 1.2;
 }
