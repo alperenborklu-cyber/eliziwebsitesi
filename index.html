@@ -21,24 +21,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <script>
+        if (localStorage.getItem('eliziTheme') === 'dark') {
+            document.body.classList.add('dark-theme');
+        }
+    </script>
 
     <!-- Header / Navigation -->
     <header class="header">
         <div class="container header-container">
             <a href="#" class="logo-container">
                 <img src="elizi-dizayn-mobilya-logo.jpeg" alt="Elizi Dizayn & Mobilya Logo" class="site-logo">
-                <span class="brand-text">ELİZİ <span class="sub-brand">DİZAYN</span></span>
+                <span class="brand-text">ELİZİ <span class="sub-brand" data-translate="header-subbrand">DİZAYN</span></span>
             </a>
             
             <nav class="nav-menu" id="navMenu">
-                <a href="#home" class="nav-link active">Ana Sayfa</a>
-                <a href="#collections" class="nav-link">Koleksiyonlar</a>
-                <a href="#craftsmanship" class="nav-link">Ustalık</a>
-                <a href="blog.html" class="nav-link">Blog</a>
-                <a href="#contact" class="nav-link">İletişim</a>
+                <a href="#home" class="nav-link active" data-translate="nav-home">Ana Sayfa</a>
+                <a href="#collections" class="nav-link" data-translate="nav-collections">Koleksiyonlar</a>
+                <a href="#craftsmanship" class="nav-link" data-translate="nav-craftsmanship">Ustalık</a>
+                <a href="blog.html" class="nav-link" data-translate="nav-blog">Blog</a>
+                <a href="#contact" class="nav-link" data-translate="nav-contact">İletişim</a>
             </nav>
 
             <div class="header-actions">
+                <button id="themeToggle" class="btn-theme-toggle" aria-label="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
+                <button id="langToggle" class="btn-lang-toggle" aria-label="Toggle Language">EN</button>
                 <a href="https://wa.me/905368946008" target="_blank" class="btn-whatsapp-header">
                     <i class="fab fa-whatsapp"></i> WhatsApp
                 </a>
@@ -62,12 +69,12 @@
         </div>
         <div class="container hero-container">
             <div class="hero-content">
-                <span class="hero-tagline animate-up">Sabit & Hareketli Ahşap Projeleri</span>
-                <h1 class="hero-title animate-up delay-1">Yaşam Alanlarınıza<br>Bütünsel Dokunuşlar</h1>
-                <p class="hero-desc animate-up delay-2">Siteler Ankara'nın köklü ahşap işçiliği geleneğini modern tasarım vizyonuyla birleştiriyoruz. Tek imalat değil, yaşam alanlarınızın tamamına hitap eden kapsamlı sabit ve hareketli mobilya projeleri tasarlıyor ve üretiyoruz.</p>
+                <span class="hero-tagline animate-up" data-translate="hero-tagline">Sabit & Hareketli Ahşap Projeleri</span>
+                <h1 class="hero-title animate-up delay-1" data-translate="hero-title">Yaşam Alanlarınıza<br>Bütünsel Dokunuşlar</h1>
+                <p class="hero-desc animate-up delay-2" data-translate="hero-desc">Siteler Ankara'nın köklü ahşap işçiliği geleneğini modern tasarım vizyonuyla birleştiriyoruz. Tek imalat değil, yaşam alanlarınızın tamamına hitap eden kapsamlı sabit ve hareketli mobilya projeleri tasarlıyor ve üretiyoruz.</p>
                 <div class="hero-actions-group animate-up delay-3">
-                    <a href="#collections" class="btn-primary">Projelerimizi Keşfet</a>
-                    <a href="#contact" class="btn-secondary">Randevu Alın</a>
+                    <a href="#collections" class="btn-primary" data-translate="hero-btn-discover">Projelerimizi Keşfet</a>
+                    <a href="#contact" class="btn-secondary" data-translate="hero-btn-appointment">Randevu Alın</a>
                 </div>
             </div>
         </div>
@@ -85,18 +92,18 @@
             <div class="highlights-grid">
                 <div class="highlight-item">
                     <div class="highlight-icon"><i class="fa-solid fa-compass-drafting"></i></div>
-                    <h3>Bütünsel Çizimler</h3>
-                    <p>Mekanınızın tamamına veya belirli alanlarına en uygun mimari yerleşim planlarını hazırlıyoruz.</p>
+                    <h3 data-translate="hl-title-1">Bütünsel Çizimler</h3>
+                    <p data-translate="hl-desc-1">Mekanınızın tamamına veya belirli alanlarına en uygun mimari yerleşim planlarını hazırlıyoruz.</p>
                 </div>
                 <div class="highlight-item">
                     <div class="highlight-icon"><i class="fa-solid fa-tree"></i></div>
-                    <h3>Doğal Malzemeler</h3>
-                    <p>Birinci sınıf meşe, ceviz, doğal kaplama ve birinci kalite ahşap panel bileşenleri kullanıyoruz.</p>
+                    <h3 data-translate="hl-title-2">Doğal Malzemeler</h3>
+                    <p data-translate="hl-desc-2">Birinci sınıf meşe, ceviz, doğal kaplama ve birinci kalite ahşap panel bileşenleri kullanıyoruz.</p>
                 </div>
                 <div class="highlight-item">
                     <div class="highlight-icon"><i class="fa-solid fa-pencil-ruler"></i></div>
-                    <h3>Proje Bazlı Üretim</h3>
-                    <p>Tekli ürün satışı yerine, mekanınız için gerekli tüm sabit ve hareketli ahşap imalatını üstleniyoruz.</p>
+                    <h3 data-translate="hl-title-3">Proje Bazlı Üretim</h3>
+                    <p data-translate="hl-desc-3">Tekli ürün satışı yerine, mekanınız için gerekli tüm sabit ve hareketli ahşap imalatını üstleniyoruz.</p>
                 </div>
             </div>
         </div>
@@ -106,12 +113,10 @@
     <section id="collections" class="collections-section">
         <div class="container">
             <div class="section-header">
-                <span class="section-subtitle">Premium Seçki</span>
-                <h2 class="section-title">Elizi Proje Dünyası</h2>
+                <span class="section-subtitle" data-translate="coll-subtitle">Premium Seçki</span>
+                <h2 class="section-title" data-translate="coll-title">Elizi Proje Dünyası</h2>
                 <div class="section-divider"></div>
             </div>
-
-
 
             <!-- Portfolio Grid -->
             <div class="portfolio-grid">
@@ -121,12 +126,12 @@
                         <img src="assets/hero.jpg" alt="Lüks Yaşam Alanı" class="portfolio-img">
                         <div class="portfolio-overlay">
                             <span class="zoom-icon"><i class="fa-solid fa-expand"></i></span>
-                            <p class="portfolio-hover-desc">Mekanla bütünleşen masif ahşap duvar kaplamaları, entegre aydınlatmalar ve modern TV üniteleriyle komple yaşam alanı projeleri.</p>
+                            <p class="portfolio-hover-desc" data-translate="port-desc-1">Mekanla bütünleşen masif ahşap duvar kaplamaları, entegre aydınlatmalar ve modern TV üniteleriyle komple yaşam alanı projeleri.</p>
                         </div>
                     </div>
                     <div class="portfolio-info">
-                        <span class="portfolio-cat">Yaşam Alanı Projesi</span>
-                        <h3>Modern Ahşap Duvar Kaplama & TV Ünitesi</h3>
+                        <span class="portfolio-cat" data-translate="port-cat-1">Yaşam Alanı Projesi</span>
+                        <h3 data-translate="port-title-1">Modern Ahşap Duvar Kaplama & TV Ünitesi</h3>
                     </div>
                 </div>
 
@@ -136,12 +141,12 @@
                         <img src="assets/dining.jpg" alt="Doğal Meşe Yemek Masası" class="portfolio-img">
                         <div class="portfolio-overlay">
                             <span class="zoom-icon"><i class="fa-solid fa-expand"></i></span>
-                            <p class="portfolio-hover-desc">Doğal meşe masif masalar, uyumlu konsollar ve hareketli mobilya elemanlarıyla kurgulanan bütünsel yemek alanı projeleri.</p>
+                            <p class="portfolio-hover-desc" data-translate="port-desc-2">Doğal meşe masif masalar, uyumlu konsollar ve hareketli mobilya elemanlarıyla kurgulanan bütünsel yemek alanı projeleri.</p>
                         </div>
                     </div>
                     <div class="portfolio-info">
-                        <span class="portfolio-cat">Yemek Odası Projesi</span>
-                        <h3>Bespoke Yemek Masası & Konsol Uygulaması</h3>
+                        <span class="portfolio-cat" data-translate="port-cat-2">Yemek Odası Projesi</span>
+                        <h3 data-translate="port-title-2">Bespoke Yemek Masası & Konsol Uygulaması</h3>
                     </div>
                 </div>
 
@@ -151,12 +156,12 @@
                         <img src="assets/wardrobe.jpg" alt="Lüks Giyinme Odası" class="portfolio-img">
                         <div class="portfolio-overlay">
                             <span class="zoom-icon"><i class="fa-solid fa-expand"></i></span>
-                            <p class="portfolio-hover-desc">Mekana göre özel ölçüyle tasarlanan, füme cam kapaklı, LED aydınlatmalı gömme dolap ve giyinme odası projeleri.</p>
+                            <p class="portfolio-hover-desc" data-translate="port-desc-3">Mekana göre özel ölçüyle tasarlanan, füme cam kapaklı, LED aydınlatmalı gömme dolap ve giyinme odası projeleri.</p>
                         </div>
                     </div>
                     <div class="portfolio-info">
-                        <span class="portfolio-cat">Giyinme Odası Projesi</span>
-                        <h3>Gömme Dolap & Giyinme Odası Uygulaması</h3>
+                        <span class="portfolio-cat" data-translate="port-cat-3">Giyinme Odası Projesi</span>
+                        <h3 data-translate="port-title-3">Gömme Dolap & Giyinme Odası Uygulaması</h3>
                     </div>
                 </div>
             </div>
@@ -170,35 +175,35 @@
                 <div class="craftsmanship-image-area">
                     <img src="assets/craft.jpg" alt="Ustalık ve Malzeme Detayı" class="craftsmanship-image">
                     <div class="experience-badge">
-                        <span class="years">Siteler</span>
-                        <span class="text">Ustalığı</span>
+                        <span class="years" data-translate="craft-badge-1">Siteler</span>
+                        <span class="text" data-translate="craft-badge-2">Ustalığı</span>
                     </div>
                 </div>
                 <div class="craftsmanship-text-area">
-                    <span class="section-subtitle text-left">Geleneğin İzinde</span>
-                    <h2 class="section-title text-left">Her Aşamada Kusursuz İşçilik</h2>
-                    <p class="craft-p">Ankara Siteler'deki üretim merkezimizde, ham ahşabın sanata dönüştüğü yolculuğu yönetiyoruz. Tasarımcılarımız mekanınızın mimari diline uyum sağlayacak komple taslakları çizerken, ustalarımız her detayda titizlikle çalışır.</p>
+                    <span class="section-subtitle text-left" data-translate="craft-subtitle">Geleneğin İzinde</span>
+                    <h2 class="section-title text-left" data-translate="craft-title">Her Aşamada Kusursuz İşçilik</h2>
+                    <p class="craft-p" data-translate="craft-p">Ankara Siteler'deki üretim merkezimizde, ham ahşabın sanata dönüştüğü yolculuğu yönetiyoruz. Tasarımcılarımız mekanınızın mimari diline uyum sağlayacak komple taslakları çizerken, ustalarımız her detayda titizlikle çalışır.</p>
                     
                     <ul class="craft-details-list">
                         <li>
                             <span class="list-num">01</span>
                             <div>
-                                <h4>Kişiye Özel Alan Çözümleri</h4>
-                                <p>Tek ürün satışı yerine, evinizin tamamı ya da belirlediğiniz odaları için bütünsel yerleşim ve imalat planları hazırlıyoruz.</p>
+                                <h4 data-translate="craft-item-t-1">Kişiye Özel Alan Çözümleri</h4>
+                                <p data-translate="craft-item-d-1">Tek ürün satışı yerine, evinizin tamamı ya da belirlediğiniz odaları için bütünsel yerleşim ve imalat planları hazırlıyoruz.</p>
                             </div>
                         </li>
                         <li>
                             <span class="list-num">02</span>
                             <div>
-                                <h4>Sabit ve Hareketli Mobilya</h4>
-                                <p>Konsollar, yemek masaları, TV üniteleri, gömme dolaplar ve duvar panelleri gibi tüm ahşap elemanları uyum içinde üretiyoruz.</p>
+                                <h4 data-translate="craft-item-t-2">Sabit ve Hareketli Mobilya</h4>
+                                <p data-translate="craft-item-d-2">Konsollar, yemek masaları, TV üniteleri, gömme dolaplar ve duvar panelleri gibi tüm ahşap elemanları uyum içinde üretiyoruz.</p>
                             </div>
                         </li>
                         <li>
                             <span class="list-num">03</span>
                             <div>
-                                <h4>Malzeme ve Zanaat Gücü</h4>
-                                <p>Zengin hare yapısına sahip ham ağaçları, modern cila teknikleri ve geleneksel birleştirme yöntemleriyle işliyoruz.</p>
+                                <h4 data-translate="craft-item-t-3">Malzeme ve Zanaat Gücü</h4>
+                                <p data-translate="craft-item-d-3">Zengin hare yapısına sahip ham ağaçları, modern cila teknikleri ve geleneksel birleştirme yöntemleriyle işliyoruz.</p>
                             </div>
                         </li>
                     </ul>
@@ -211,10 +216,10 @@
     <section class="quote-banner">
         <div class="container quote-container">
             <i class="fa-solid fa-quote-left quote-icon"></i>
-            <blockquote>
+            <blockquote data-translate="quote-text">
                 "Mobilya sadece bir eşya değil, ruhu olan ve mekanın atmosferini tamamen değiştiren bir sanat eseridir. Tasarımlarımızda bu vizyonla yola çıkıyoruz."
             </blockquote>
-            <cite>— Elizi Dizayn Tasarım Ekibi</cite>
+            <cite data-translate="quote-cite">— Elizi Dizayn Tasarım Ekibi</cite>
         </div>
     </section>
 
@@ -222,67 +227,67 @@
     <section id="blog-preview" class="blog-section">
         <div class="container">
             <div class="section-header" style="text-align: center; margin-bottom: 50px;">
-                <span class="section-subtitle">Tasarım & Rehberler</span>
-                <h2 class="section-title">Elizi Mobilya Blog</h2>
+                <span class="section-subtitle" data-translate="blog-subtitle">Tasarım & Rehberler</span>
+                <h2 class="section-title" data-translate="blog-title">Elizi Mobilya Blog</h2>
                 <div class="section-divider" style="margin: 20px auto;"></div>
-                <p style="max-width: 600px; margin: 0 auto; color: var(--text-secondary); font-weight: 300;">Yaşam alanlarınız için mobilya seçimi, tasarım trendleri ve ahşap işçiliğine dair ipuçları.</p>
+                <p style="max-width: 600px; margin: 0 auto; color: var(--text-secondary); font-weight: 300;" data-translate="blog-desc">Yaşam alanlarınız için mobilya seçimi, tasarım trendleri ve ahşap işçiliğine dair ipuçları.</p>
             </div>
             
             <div class="blog-grid">
                 <!-- Blog Card 1 -->
                 <article class="blog-card">
                     <div class="blog-card-img-wrapper">
-                        <span class="blog-category-badge">Özel Tasarım</span>
+                        <span class="blog-category-badge" data-translate="blog-cat-1">Özel Tasarım</span>
                         <img src="assets/hero.jpg" alt="Ankara Özel Tasarım Mobilya Siteler" class="blog-card-img">
                     </div>
                     <div class="blog-card-content">
                         <div class="blog-card-meta">
                             <span><i class="far fa-calendar-alt"></i> 11 Ağustos 2026</span>
-                            <span><i class="far fa-user"></i> Elizi Zanaat</span>
+                            <span data-translate="blog-author-1"><i class="far fa-user"></i> Elizi Zanaat</span>
                         </div>
-                        <h3 class="blog-card-title"><a href="blog/ankara-ozel-tasarim-mobilya-siteler.html">Ankara Özel Tasarım Mobilya ve Siteler Mobilya Geleneği</a></h3>
-                        <p class="blog-card-excerpt">Ankara Siteler'in köklü ahşap işçiliği kültürünü modern mimari vizyonla harmanlıyoruz. Özel tasarım mobilya süreçlerimizi, malzeme seçimlerimizi...</p>
-                        <a href="blog/ankara-ozel-tasarim-mobilya-siteler.html" class="blog-card-link">Devamını Oku <i class="fas fa-arrow-right"></i></a>
+                        <h3 class="blog-card-title"><a href="blog/ankara-ozel-tasarim-mobilya-siteler.html" data-translate="blog-t-1">Ankara Özel Tasarım Mobilya ve Siteler Mobilya Geleneği</a></h3>
+                        <p class="blog-card-excerpt" data-translate="blog-exc-1">Ankara Siteler'in köklü ahşap işçiliği kültürünü modern mimari vizyonla harmanlıyoruz. Özel tasarım mobilya süreçlerimizi, malzeme seçimlerimizi...</p>
+                        <a href="blog/ankara-ozel-tasarim-mobilya-siteler.html" class="blog-card-link" data-translate="blog-readmore">Devamını Oku <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
 
                 <!-- Blog Card 2 -->
                 <article class="blog-card">
                     <div class="blog-card-img-wrapper">
-                        <span class="blog-category-badge">Mutfak Projeleri</span>
+                        <span class="blog-category-badge" data-translate="blog-cat-2">Mutfak Projeleri</span>
                         <img src="assets/dining.jpg" alt="Ankara Özel Üretim Mutfak Dolabı" class="blog-card-img">
                     </div>
                     <div class="blog-card-content">
                         <div class="blog-card-meta">
                             <span><i class="far fa-calendar-alt"></i> 10 Ağustos 2026</span>
-                            <span><i class="far fa-user"></i> Elizi Mimarlık</span>
+                            <span data-translate="blog-author-2"><i class="far fa-user"></i> Elizi Mimarlık</span>
                         </div>
-                        <h3 class="blog-card-title"><a href="blog/ankara-ozel-uretim-mutfak-dolabi.html">Ankara Özel Üretim Mutfak Tasarımı & Dolap Çözümleri</a></h3>
-                        <p class="blog-card-excerpt">Mutfak dekorasyonunda estetik ve ergonominin buluşması. Kişiye özel ölçü ve lüks kaplama detaylarıyla hazırladığımız mutfak projelerimiz...</p>
-                        <a href="blog/ankara-ozel-uretim-mutfak-dolabi.html" class="blog-card-link">Devamını Oku <i class="fas fa-arrow-right"></i></a>
+                        <h3 class="blog-card-title"><a href="blog/ankara-ozel-uretim-mutfak-dolabi.html" data-translate="blog-t-2">Ankara Özel Üretim Mutfak Tasarımı & Dolap Çözümleri</a></h3>
+                        <p class="blog-card-excerpt" data-translate="blog-exc-2">Mutfak dekorasyonunda estetik ve ergonominin buluşması. Kişiye özel ölçü ve lüks kaplama detaylarıyla hazırladığımız mutfak projelerimiz...</p>
+                        <a href="blog/ankara-ozel-uretim-mutfak-dolabi.html" class="blog-card-link" data-translate="blog-readmore">Devamını Oku <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
 
                 <!-- Blog Card 3 -->
                 <article class="blog-card">
                     <div class="blog-card-img-wrapper">
-                        <span class="blog-category-badge">Villa Projeleri</span>
+                        <span class="blog-category-badge" data-translate="blog-cat-3">Villa Projeleri</span>
                         <img src="assets/wardrobe.jpg" alt="Çayyolu İncek Ümitköy Özel Mobilya" class="blog-card-img">
                     </div>
                     <div class="blog-card-content">
                         <div class="blog-card-meta">
                             <span><i class="far fa-calendar-alt"></i> 9 Ağustos 2026</span>
-                            <span><i class="far fa-user"></i> İç Mimari</span>
+                            <span data-translate="blog-author-3"><i class="far fa-user"></i> İç Mimari</span>
                         </div>
-                        <h3 class="blog-card-title"><a href="blog/cayyolu-incek-umitkoy-villa-mobilya-tasarimi.html">Çayyolu, İncek ve Ümitköy Bölgesi Lüks Villa Mobilya Tasarımı</a></h3>
-                        <p class="blog-card-excerpt">Çayyolu, İncek ve Ümitköy'deki villa ve lüks konut projelerimiz. Bütünsel iç mimari ahşap imalatlarımız ve anahtar teslim dekorasyon hizmetimiz...</p>
-                        <a href="blog/cayyolu-incek-umitkoy-villa-mobilya-tasarimi.html" class="blog-card-link">Devamını Oku <i class="fas fa-arrow-right"></i></a>
+                        <h3 class="blog-card-title"><a href="blog/cayyolu-incek-umitkoy-villa-mobilya-tasarimi.html" data-translate="blog-t-3">Çayyolu, İncek ve Ümitköy Bölgesi Lüks Villa Mobilya Tasarımı</a></h3>
+                        <p class="blog-card-excerpt" data-translate="blog-exc-3">Çayyolu, İncek ve Ümitköy'deki villa ve lüks konut projelerimiz. Bütünsel iç mimari ahşap imalatlarımız ve anahtar teslim dekorasyon hizmetimiz...</p>
+                        <a href="blog/cayyolu-incek-umitkoy-villa-mobilya-tasarimi.html" class="blog-card-link" data-translate="blog-readmore">Devamını Oku <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
             </div>
             
             <div style="text-align: center; margin-top: 50px;">
-                <a href="blog.html" class="btn-primary">Tüm Blog Yazılarını Gör</a>
+                <a href="blog.html" class="btn-primary" data-translate="blog-all-btn">Tüm Blog Yazılarını Gör</a>
             </div>
         </div>
     </section>
@@ -292,8 +297,8 @@
     <section id="contact" class="contact-section">
         <div class="container">
             <div class="section-header">
-                <span class="section-subtitle">İletişime Geçin</span>
-                <h2 class="section-title">Sizi Siteler Stüdyomuza Bekliyoruz</h2>
+                <span class="section-subtitle" data-translate="contact-subtitle">İletişime Geçin</span>
+                <h2 class="section-title" data-translate="contact-title">Sizi Siteler Stüdyomuza Bekliyoruz</h2>
                 <div class="section-divider"></div>
             </div>
 
@@ -303,21 +308,21 @@
                     <div class="contact-info-cards">
                         <div class="contact-card">
                             <div class="card-icon"><i class="fa-solid fa-location-dot"></i></div>
-                            <h3>Showroom & Atölye</h3>
-                            <p>Önder Mah. Serince Sok. No:6/B<br>Siteler, Altındağ / Ankara</p>
+                            <h3 data-translate="contact-c-title-1">Showroom & Atölye</h3>
+                            <p data-translate="contact-c-desc-1">Önder Mah. Serince Sok. No:6/B<br>Siteler, Altındağ / Ankara</p>
                         </div>
                         <div class="contact-card">
                             <div class="card-icon"><i class="fa-solid fa-phone"></i></div>
-                            <h3>Telefon & İletişim</h3>
+                            <h3 data-translate="contact-c-title-2">Telefon & İletişim</h3>
                             <p>+90 536 894 60 08</p>
                         </div>
                         <div class="contact-card">
                             <div class="card-icon"><i class="fa-solid fa-envelope"></i></div>
-                            <h3>E-posta Adresi</h3>
+                            <h3 data-translate="contact-c-title-3">E-posta Adresi</h3>
                             <p>info@elizidizayn.com</p>
                         </div>
                         
-                        <a href="https://wa.me/905368946008?text=Merhaba,%20tasarımlarınız%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" class="btn-whatsapp-large">
+                        <a href="https://wa.me/905368946008?text=Merhaba,%20tasarımlarınız%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" class="btn-whatsapp-large" data-translate="contact-wa-btn">
                             <i class="fab fa-whatsapp"></i> WhatsApp ile Hızlı Teklif Alın
                         </a>
                     </div>
@@ -326,8 +331,8 @@
                 <!-- Sağ Kolon: Tasarım Tarif Formu -->
                 <div class="contact-form-area">
                     <div class="form-header">
-                        <h3>Kişiye Özel Tasarım Talebi</h3>
-                        <p>Hayalinizdeki tasarımı tarif edin, teknik çizimlerinizi veya örnek görsellerinizi yükleyin, en kısa sürede size özel fiyat teklifi hazırlayalım.</p>
+                        <h3 data-translate="form-title">Kişiye Özel Tasarım Talebi</h3>
+                        <p data-translate="form-desc">Hayalinizdeki tasarımı tarif edin, teknik çizimlerinizi veya örnek görsellerinizi yükleyin, en kısa sürede size özel fiyat teklifi hazırlayalım.</p>
                     </div>
                     <form action="https://formsubmit.co/alperen.borklu@gmail.com" method="POST" enctype="multipart/form-data" class="design-form">
                         <!-- Honeypot -->
@@ -337,32 +342,32 @@
                         
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="form-name">Adınız Soyadınız *</label>
+                                <label for="form-name" data-translate="form-label-name">Adınız Soyadınız *</label>
                                 <input type="text" name="name" id="form-name" placeholder="Örn: Metin Yılmaz" required>
                             </div>
                             <div class="form-group">
-                                <label for="form-phone">Telefon Numaranız *</label>
+                                <label for="form-phone" data-translate="form-label-phone">Telefon Numaranız *</label>
                                 <input type="tel" name="phone" id="form-phone" placeholder="053X XXX XX XX" required>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="form-email">E-posta Adresiniz *</label>
+                            <label for="form-email" data-translate="form-label-email">E-posta Adresiniz *</label>
                             <input type="email" name="email" id="form-email" placeholder="isim@eposta.com" required>
                         </div>
                         <div class="form-group">
-                            <label for="form-desc">Tasarımınızı Tarif Edin *</label>
+                            <label for="form-desc" data-translate="form-label-desc">Tasarımınızı Tarif Edin *</label>
                             <textarea name="description" id="form-desc" rows="6" placeholder="İstediğiniz mobilyayı (masa, konsol, gardırop vb.), ölçüleri, malzeme detaylarını ve renk tercihlerini belirtin..." required></textarea>
                         </div>
                         <div class="form-group">
-                            <label class="form-label">Varsa Teknik Çizim, Model veya İlham Görseli</label>
+                            <label class="form-label" data-translate="form-label-file">Varsa Teknik Çizim, Model veya İlham Görseli</label>
                             <label for="form-file" class="file-upload-box">
                                 <i class="fa-solid fa-cloud-arrow-up file-icon"></i>
-                                <span class="file-title" id="file-upload-title">Dosya Seçin veya Sürükleyin</span>
-                                <span class="file-subtitle">PDF, CAD çizimi, JPG veya PNG (Max 10MB)</span>
+                                <span class="file-title" id="file-upload-title" data-translate="form-file-title">Dosya Seçin veya Sürükleyin</span>
+                                <span class="file-subtitle" data-translate="form-file-subtitle">PDF, CAD çizimi, JPG veya PNG (Max 10MB)</span>
                             </label>
                             <input type="file" name="attachment" id="form-file" accept="image/*,application/pdf" style="display: none;">
                         </div>
-                        <button type="submit" class="btn-primary form-submit-btn">Talebi Gönder</button>
+                        <button type="submit" class="btn-primary form-submit-btn" data-translate="form-submit-btn">Talebi Gönder</button>
                     </form>
                 </div>
             </div>
@@ -380,23 +385,23 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </div>
-                <h3>Müşterilerimizin Google Haritalar Değerlendirmeleri</h3>
+                <h3 data-translate="reviews-title">Müşterilerimizin Google Haritalar Değerlendirmeleri</h3>
             </div>
             <div class="reviews-carousel">
                 <div class="review-slide active">
-                    <p class="review-text">"Ofis dekorasyonumuzu yaptırmıştik. İşçilik kalitesi ilgi alaka hepsi gayet güzel. İsleri rast gitsin."</p>
+                    <p class="review-text" data-translate="review-t-1">"Ofis dekorasyonumuzu yaptırmıştik. İşçilik kalitesi ilgi alaka hepsi gayet güzel. İsleri rast gitsin."</p>
                     <span class="review-author">- Mehmet</span>
                 </div>
                 <div class="review-slide">
-                    <p class="review-text">"Evimiz için ahşap TV ünitesi ve kitaplık yaptırdık. Tam söz verdikleri günde, tertemiz monte ettiler. İlgi ve alakaları için teşekkürler."</p>
+                    <p class="review-text" data-translate="review-t-2">"Evimiz için ahşap TV ünitesi ve kitaplık yaptırdık. Tam söz verdikleri günde, tertemiz monte ettiler. İlgi ve alakaları için teşekkürler."</p>
                     <span class="review-author">- Selim</span>
                 </div>
                 <div class="review-slide">
-                    <p class="review-text">"Siteler'deki stüdyolarına gidip sipariş vermiştik. Salon takımı tam hayal ettiğimiz gibi oldu. Hem kaliteli hem de çok şık. Ellerinize sağlık."</p>
+                    <p class="review-text" data-translate="review-t-3">"Siteler'deki stüdyolarına gidip sipariş vermiştik. Salon takımı tam hayal ettiğimiz gibi oldu. Hem kaliteli hem de çok şık. Ellerinize sağlık."</p>
                     <span class="review-author">- Elif</span>
                 </div>
                 <div class="review-slide">
-                    <p class="review-text">"Özel tasarım yemek odası takımı yaptırdık. Ağacın kalitesi ve detay işçilikleri gerçekten muazzam. Çok memnun kaldık, tavsiye ederim."</p>
+                    <p class="review-text" data-translate="review-t-4">"Özel tasarım yemek odası takımı yaptırdık. Ağacın kalitesi ve detay işçilikleri gerçekten muazzam. Çok memnun kaldık, tavsiye ederim."</p>
                     <span class="review-author">- Canan</span>
                 </div>
             </div>
@@ -425,8 +430,8 @@
     <footer class="footer">
         <div class="container footer-container">
             <div class="footer-brand">
-                <div class="footer-brand-title">ELİZİ <span class="footer-sub-brand">DİZAYN & MOBİLYA</span></div>
-                <p>Siteler'den yükselen zanaat, evinizdeki kusursuz konfor.</p>
+                <div class="footer-brand-title">ELİZİ <span class="footer-sub-brand" data-translate="footer-subbrand">DİZAYN & MOBİLYA</span></div>
+                <p data-translate="footer-desc">Siteler'den yükselen zanaat, evinizdeki kusursuz konfor.</p>
                 <div class="footer-socials">
                     <a href="https://www.instagram.com/elizidizayn.mobilya/" target="_blank"><i class="fab fa-instagram"></i></a>
                     <a href="https://wa.me/905368946008" target="_blank"><i class="fab fa-whatsapp"></i></a>
@@ -435,22 +440,22 @@
             </div>
             
             <div class="footer-links">
-                <h4>Hızlı Erişim</h4>
-                <a href="#home">Ana Sayfa</a>
-                <a href="#collections">Koleksiyonlar</a>
-                <a href="#craftsmanship">Ustalık & Ahşap</a>
-                <a href="blog.html">Blog & Rehberler</a>
-                <a href="#contact">İletişim</a>
+                <h4 data-translate="footer-h-links">Hızlı Erişim</h4>
+                <a href="#home" data-translate="nav-home">Ana Sayfa</a>
+                <a href="#collections" data-translate="nav-collections">Koleksiyonlar</a>
+                <a href="#craftsmanship" data-translate="nav-craftsmanship">Ustalık & Ahşap</a>
+                <a href="blog.html" data-translate="nav-blog">Blog & Rehberler</a>
+                <a href="#contact" data-translate="nav-contact">İletişim</a>
             </div>
 
             <div class="footer-hours">
-                <h4>Çalışma Saatleri</h4>
-                <p>Pazartesi - Cumartesi: 09:00 - 19:30</p>
-                <p>Pazar: 11:30 - 18:00 (Randevu ile)</p>
+                <h4 data-translate="footer-h-hours">Çalışma Saatleri</h4>
+                <p data-translate="footer-hours-1">Pazartesi - Cumartesi: 09:00 - 19:30</p>
+                <p data-translate="footer-hours-2">Pazar: 11:30 - 18:00 (Randevu ile)</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Elizi Dizayn & Mobilya. Tüm Hakları Saklıdır. Designed by <a href="https://alperenborklu.com" target="_blank">Alperen Börklü</a></p>
+            <p data-translate="footer-copy">&copy; 2026 Elizi Dizayn & Mobilya. Tüm Hakları Saklıdır. Designed by <a href="https://alperenborklu.com" target="_blank">Alperen Börklü</a></p>
         </div>
     </footer>
 
@@ -469,13 +474,13 @@
                 <div class="email-popup-icon">
                     <i class="fa-regular fa-envelope-open"></i>
                 </div>
-                <h3>Elizi Tasarım Dünyası</h3>
-                <p>Eviniz için ilham verici iç mimari fikirleri, en yeni el işçiliği koleksiyonlarımız ve özel tekliflerimizden ilk siz haberdar olun.</p>
+                <h3 data-translate="pop-title">Elizi Tasarım Dünyası</h3>
+                <p data-translate="pop-desc">Eviniz için ilham verici iç mimari fikirleri, en yeni el işçiliği koleksiyonlarımız ve özel tekliflerimizden ilk siz haberdar olun.</p>
                 <form id="emailPopupForm" class="email-popup-form">
                     <input type="email" id="popupEmailInput" placeholder="E-posta adresinizi yazın..." required>
-                    <button type="submit" class="btn-primary">Kayıt Ol</button>
+                    <button type="submit" class="btn-primary" data-translate="pop-btn">Kayıt Ol</button>
                 </form>
-                <div class="email-popup-success" id="emailPopupSuccess">
+                <div class="email-popup-success" id="emailPopupSuccess" data-translate="pop-success">
                     <i class="fa-solid fa-circle-check"></i> Aramıza hoş geldiniz! E-posta adresiniz kaydedildi.
                 </div>
             </div>

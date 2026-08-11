@@ -20,25 +20,32 @@
     <!-- Custom Style Sheet -->
     <link rel="stylesheet" href="../style.css">
 </head>
-<body>
+<body class="dark-theme-init">
+    <script>
+        if (localStorage.getItem('eliziTheme') === 'dark') {
+            document.body.classList.add('dark-theme');
+        }
+    </script>
 
     <!-- Header / Navigation -->
     <header class="header scrolled">
         <div class="container header-container">
             <a href="../index.html" class="logo-container">
                 <img src="../elizi-dizayn-mobilya-logo.jpeg" alt="Elizi Dizayn & Mobilya Logo" class="site-logo">
-                <span class="brand-text">ELİZİ <span class="sub-brand">DİZAYN</span></span>
+                <span class="brand-text">ELİZİ <span class="sub-brand" data-translate="header-subbrand">DİZAYN</span></span>
             </a>
             
             <nav class="nav-menu" id="navMenu">
-                <a href="../index.html#home" class="nav-link">Ana Sayfa</a>
-                <a href="../index.html#collections" class="nav-link">Koleksiyonlar</a>
-                <a href="../index.html#craftsmanship" class="nav-link">Ustalık</a>
-                <a href="../blog.html" class="nav-link active">Blog</a>
-                <a href="../index.html#contact" class="nav-link">İletişim</a>
+                <a href="../index.html#home" class="nav-link" data-translate="nav-home">Ana Sayfa</a>
+                <a href="../index.html#collections" class="nav-link" data-translate="nav-collections">Koleksiyonlar</a>
+                <a href="../index.html#craftsmanship" class="nav-link" data-translate="nav-craftsmanship">Ustalık</a>
+                <a href="../blog.html" class="nav-link active" data-translate="nav-blog">Blog</a>
+                <a href="../index.html#contact" class="nav-link" data-translate="nav-contact">İletişim</a>
             </nav>
 
             <div class="header-actions">
+                <button id="themeToggle" class="btn-theme-toggle" aria-label="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
+                <button id="langToggle" class="btn-lang-toggle" aria-label="Toggle Language">EN</button>
                 <a href="https://wa.me/905368946008" target="_blank" class="btn-whatsapp-header">
                     <i class="fab fa-whatsapp"></i> WhatsApp
                 </a>
@@ -173,27 +180,7 @@
         </div>
     </footer>
 
-    <!-- JS script for mobile responsiveness -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-            const navMenu = document.getElementById('navMenu');
-            const navLinks = document.querySelectorAll('.nav-link');
-
-            if (mobileMenuBtn) {
-                mobileMenuBtn.addEventListener('click', () => {
-                    mobileMenuBtn.classList.toggle('active');
-                    navMenu.classList.toggle('active');
-                });
-            }
-
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    if (mobileMenuBtn) mobileMenuBtn.classList.remove('active');
-                    if (navMenu) navMenu.classList.remove('active');
-                });
-            });
-        });
-    </script>
+    <!-- Custom JavaScript -->
+    <script src="../app.js?v=1.2"></script>
 </body>
 </html>

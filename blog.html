@@ -21,24 +21,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body style="background-color: var(--bg-secondary);">
+    <script>
+        if (localStorage.getItem('eliziTheme') === 'dark') {
+            document.body.classList.add('dark-theme');
+        }
+    </script>
 
     <!-- Header / Navigation -->
     <header class="header scrolled">
         <div class="container header-container">
             <a href="index.html" class="logo-container">
                 <img src="elizi-dizayn-mobilya-logo.jpeg" alt="Elizi Dizayn & Mobilya Logo" class="site-logo">
-                <span class="brand-text">ELİZİ <span class="sub-brand">DİZAYN</span></span>
+                <span class="brand-text">ELİZİ <span class="sub-brand" data-translate="header-subbrand">DİZAYN</span></span>
             </a>
             
             <nav class="nav-menu" id="navMenu">
-                <a href="index.html#home" class="nav-link">Ana Sayfa</a>
-                <a href="index.html#collections" class="nav-link">Koleksiyonlar</a>
-                <a href="index.html#craftsmanship" class="nav-link">Ustalık</a>
-                <a href="blog.html" class="nav-link active">Blog</a>
-                <a href="index.html#contact" class="nav-link">İletişim</a>
+                <a href="index.html#home" class="nav-link" data-translate="nav-home">Ana Sayfa</a>
+                <a href="index.html#collections" class="nav-link" data-translate="nav-collections">Koleksiyonlar</a>
+                <a href="index.html#craftsmanship" class="nav-link" data-translate="nav-craftsmanship">Ustalık</a>
+                <a href="blog.html" class="nav-link active" data-translate="nav-blog">Blog</a>
+                <a href="index.html#contact" class="nav-link" data-translate="nav-contact">İletişim</a>
             </nav>
 
             <div class="header-actions">
+                <button id="themeToggle" class="btn-theme-toggle" aria-label="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
+                <button id="langToggle" class="btn-lang-toggle" aria-label="Toggle Language">EN</button>
                 <a href="https://wa.me/905368946008" target="_blank" class="btn-whatsapp-header">
                     <i class="fab fa-whatsapp"></i> WhatsApp
                 </a>
@@ -54,9 +61,9 @@
     <!-- Blog Header Banner -->
     <section class="post-layout" style="padding-top: 150px; padding-bottom: 50px; text-align: center;">
         <div class="container">
-            <span class="post-tag">Elizi Mobilya Rehberi</span>
-            <h1 class="post-title" style="font-size: 3.5rem; margin-bottom: 15px;">Fikirler & Tasarım İpuçları</h1>
-            <p style="max-width: 700px; margin: 0 auto; color: var(--text-secondary); font-weight: 300; font-size: 1.1rem; line-height: 1.7;">
+            <span class="post-tag" data-translate="blog-page-tag">Elizi Mobilya Rehberi</span>
+            <h1 class="post-title" style="font-size: 3.5rem; margin-bottom: 15px;" data-translate="blog-page-title">Fikirler & Tasarım İpuçları</h1>
+            <p style="max-width: 700px; margin: 0 auto; color: var(--text-secondary); font-weight: 300; font-size: 1.1rem; line-height: 1.7;" data-translate="blog-page-desc">
                 Kişiye özel mobilya üretimi, Ankara Siteler ahşap işçiliği, modern ev dekorasyonu ve mimari projeler hakkında aradığınız tüm ilham verici içerikler.
             </p>
         </div>
@@ -70,102 +77,102 @@
                 <!-- Blog Card 1 -->
                 <article class="blog-card">
                     <div class="blog-card-img-wrapper">
-                        <span class="blog-category-badge">Özel Tasarım</span>
+                        <span class="blog-category-badge" data-translate="blog-cat-1">Özel Tasarım</span>
                         <img src="assets/hero.jpg" alt="Ankara Özel Tasarım Mobilya Siteler" class="blog-card-img">
                     </div>
                     <div class="blog-card-content">
                         <div class="blog-card-meta">
                             <span><i class="far fa-calendar-alt"></i> 11 Ağustos 2026</span>
-                            <span><i class="far fa-user"></i> Elizi Zanaat</span>
+                            <span data-translate="blog-author-1"><i class="far fa-user"></i> Elizi Zanaat</span>
                         </div>
-                        <h3 class="blog-card-title"><a href="blog/ankara-ozel-tasarim-mobilya-siteler.html">Ankara Özel Tasarım Mobilya ve Siteler Mobilya Geleneği</a></h3>
-                        <p class="blog-card-excerpt">Ankara Siteler'in köklü ahşap işçiliği kültürünü modern mimari vizyonla harmanlıyoruz. Özel tasarım mobilya süreçlerimizi, malzeme seçimlerimizi ve yaşam alanlarına değer katan detayları keşfedin.</p>
-                        <a href="blog/ankara-ozel-tasarim-mobilya-siteler.html" class="blog-card-link">Devamını Oku <i class="fas fa-arrow-right"></i></a>
+                        <h3 class="blog-card-title"><a href="blog/ankara-ozel-tasarim-mobilya-siteler.html" data-translate="blog-t-1">Ankara Özel Tasarım Mobilya ve Siteler Mobilya Geleneği</a></h3>
+                        <p class="blog-card-excerpt" data-translate="blog-exc-1-full">Ankara Siteler'in köklü ahşap işçiliği kültürünü modern mimari vizyonla harmanlıyoruz. Özel tasarım mobilya süreçlerimizi, malzeme seçimlerimizi ve yaşam alanlarına değer katan detayları keşfedin.</p>
+                        <a href="blog/ankara-ozel-tasarim-mobilya-siteler.html" class="blog-card-link" data-translate="blog-readmore">Devamını Oku <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
 
                 <!-- Blog Card 2 -->
                 <article class="blog-card">
                     <div class="blog-card-img-wrapper">
-                        <span class="blog-category-badge">Mutfak Projeleri</span>
+                        <span class="blog-category-badge" data-translate="blog-cat-2">Mutfak Projeleri</span>
                         <img src="assets/dining.jpg" alt="Ankara Özel Üretim Mutfak Dolabı" class="blog-card-img">
                     </div>
                     <div class="blog-card-content">
                         <div class="blog-card-meta">
                             <span><i class="far fa-calendar-alt"></i> 10 Ağustos 2026</span>
-                            <span><i class="far fa-user"></i> Elizi Mimarlık</span>
+                            <span data-translate="blog-author-2"><i class="far fa-user"></i> Elizi Mimarlık</span>
                         </div>
-                        <h3 class="blog-card-title"><a href="blog/ankara-ozel-uretim-mutfak-dolabi.html">Ankara Özel Üretim Mutfak Tasarımı & Dolap Çözümleri</a></h3>
-                        <p class="blog-card-excerpt">Mutfak dekorasyonunda estetik ve ergonominin kusursuz buluşması. Kişiye özel ölçü ve lüks kaplama detaylarıyla hazırladığımız, Ankara'da fark yaratan özel üretim mutfak projelerimiz.</p>
-                        <a href="blog/ankara-ozel-uretim-mutfak-dolabi.html" class="blog-card-link">Devamını Oku <i class="fas fa-arrow-right"></i></a>
+                        <h3 class="blog-card-title"><a href="blog/ankara-ozel-uretim-mutfak-dolabi.html" data-translate="blog-t-2">Ankara Özel Üretim Mutfak Tasarımı & Dolap Çözümleri</a></h3>
+                        <p class="blog-card-excerpt" data-translate="blog-exc-2-full">Mutfak dekorasyonunda estetik ve ergonominin kusursuz buluşması. Kişiye özel ölçü ve lüks kaplama detaylarıyla hazırladığımız, Ankara'da fark yaratan özel üretim mutfak projelerimiz.</p>
+                        <a href="blog/ankara-ozel-uretim-mutfak-dolabi.html" class="blog-card-link" data-translate="blog-readmore">Devamını Oku <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
 
                 <!-- Blog Card 3 -->
                 <article class="blog-card">
                     <div class="blog-card-img-wrapper">
-                        <span class="blog-category-badge">Villa Projeleri</span>
+                        <span class="blog-category-badge" data-translate="blog-cat-3">Villa Projeleri</span>
                         <img src="assets/wardrobe.jpg" alt="Çayyolu İncek Ümitköy Özel Mobilya" class="blog-card-img">
                     </div>
                     <div class="blog-card-content">
                         <div class="blog-card-meta">
                             <span><i class="far fa-calendar-alt"></i> 9 Ağustos 2026</span>
-                            <span><i class="far fa-user"></i> İç Mimari</span>
+                            <span data-translate="blog-author-3"><i class="far fa-user"></i> İç Mimari</span>
                         </div>
-                        <h3 class="blog-card-title"><a href="blog/cayyolu-incek-umitkoy-villa-mobilya-tasarimi.html">Çayyolu, İncek ve Ümitköy Bölgesi Lüks Villa Mobilya Tasarimi</a></h3>
-                        <p class="blog-card-excerpt">Çayyolu, İncek ve Ümitköy'deki lüks villa konut projelerimiz. Bütünsel iç mimari ahşap imalatlarımız, anahtar teslim dekorasyon hizmetlerimiz ve üst düzey zanaatkarlık.</p>
-                        <a href="blog/cayyolu-incek-umitkoy-villa-mobilya-tasarimi.html" class="blog-card-link">Devamını Oku <i class="fas fa-arrow-right"></i></a>
+                        <h3 class="blog-card-title"><a href="blog/cayyolu-incek-umitkoy-villa-mobilya-tasarimi.html" data-translate="blog-t-3">Çayyolu, İncek ve Ümitköy Bölgesi Lüks Villa Mobilya Tasarimi</a></h3>
+                        <p class="blog-card-excerpt" data-translate="blog-exc-3-full">Çayyolu, İncek ve Ümitköy'deki lüks villa konut projelerimiz. Bütünsel iç mimari ahşap imalatlarımız, anahtar teslim dekorasyon hizmetlerimiz ve üst düzey zanaatkarlık.</p>
+                        <a href="blog/cayyolu-incek-umitkoy-villa-mobilya-tasarimi.html" class="blog-card-link" data-translate="blog-readmore">Devamını Oku <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
 
                 <!-- Blog Card 4 -->
                 <article class="blog-card">
                     <div class="blog-card-img-wrapper">
-                        <span class="blog-category-badge">Dolap Tasarımı</span>
+                        <span class="blog-category-badge" data-translate="blog-cat-4">Dolap Tasarımı</span>
                         <img src="assets/wardrobe.jpg" alt="Ankara Gömme Dolap Giyinme Odası" class="blog-card-img">
                     </div>
                     <div class="blog-card-content">
                         <div class="blog-card-meta">
                             <span><i class="far fa-calendar-alt"></i> 8 Ağustos 2026</span>
-                            <span><i class="far fa-user"></i> Elizi Dizayn</span>
+                            <span data-translate="blog-author-4"><i class="far fa-user"></i> Elizi Dizayn</span>
                         </div>
-                        <h3 class="blog-card-title"><a href="blog/ankara-gomme-dolap-giyinme-odasi.html">Ankara Gömme Dolap ve Giyinme Odası Tasarım Rehberi</a></h3>
-                        <p class="blog-card-excerpt">Yaşam alanlarında maksimum depolama ve lüks tasarımı bir arada sunan gömme dolap ile modern giyinme odası projelerimiz. Ankara Siteler işçiliği kalitesiyle.</p>
-                        <a href="blog/ankara-gomme-dolap-giyinme-odasi.html" class="blog-card-link">Devamını Oku <i class="fas fa-arrow-right"></i></a>
+                        <h3 class="blog-card-title"><a href="blog/ankara-gomme-dolap-giyinme-odasi.html" data-translate="blog-t-4">Ankara Gömme Dolap ve Giyinme Odası Tasarım Rehberi</a></h3>
+                        <p class="blog-card-excerpt" data-translate="blog-exc-4-full">Yaşam alanlarında maksimum depolama ve lüks tasarımı bir arada sunan gömme dolap ile modern giyinme odası projelerimiz. Ankara Siteler işçiliği kalitesiyle.</p>
+                        <a href="blog/ankara-gomme-dolap-giyinme-odasi.html" class="blog-card-link" data-translate="blog-readmore">Devamını Oku <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
 
                 <!-- Blog Card 5 -->
                 <article class="blog-card">
                     <div class="blog-card-img-wrapper">
-                        <span class="blog-category-badge">TV Üniteleri</span>
+                        <span class="blog-category-badge" data-translate="blog-cat-5">TV Üniteleri</span>
                         <img src="assets/craft.jpg" alt="Ankara TV Ünitesi" class="blog-card-img">
                     </div>
                     <div class="blog-card-content">
                         <div class="blog-card-meta">
                             <span><i class="far fa-calendar-alt"></i> 7 Ağustos 2026</span>
-                            <span><i class="far fa-user"></i> Mobilya Tasarım</span>
+                            <span data-translate="blog-author-5"><i class="far fa-user"></i> Mobilya Tasarım</span>
                         </div>
-                        <h3 class="blog-card-title"><a href="blog/ankara-modern-tv-unitesi-modelleri.html">Ankara Modern TV Ünitesi Modelleri: Ahşap ve Lüks Detaylar</a></h3>
-                        <p class="blog-card-excerpt">Salonda odak noktası oluşturacak modern ve klasik ahşap TV ünitesi modelleri. Mekana özel ölçüler, şık LED aydınlatmalar ve birinci sınıf doğal kaplamalar.</p>
-                        <a href="blog/ankara-modern-tv-unitesi-modelleri.html" class="blog-card-link">Devamını Oku <i class="fas fa-arrow-right"></i></a>
+                        <h3 class="blog-card-title"><a href="blog/ankara-modern-tv-unitesi-modelleri.html" data-translate="blog-t-5">Ankara Modern TV Ünitesi Modelleri: Ahşap ve Lüks Detaylar</a></h3>
+                        <p class="blog-card-excerpt" data-translate="blog-exc-5-full">Salonda odak noktası oluşturacak modern ve klasik ahşap TV ünitesi modelleri. Mekana özel ölçüler, şık LED aydınlatmalar ve birinci sınıf doğal kaplamalar.</p>
+                        <a href="blog/ankara-modern-tv-unitesi-modelleri.html" class="blog-card-link" data-translate="blog-readmore">Devamını Oku <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
 
                 <!-- Blog Card 6 -->
                 <article class="blog-card">
                     <div class="blog-card-img-wrapper">
-                        <span class="blog-category-badge">Duvar Panelleri</span>
+                        <span class="blog-category-badge" data-translate="blog-cat-6">Duvar Panelleri</span>
                         <img src="assets/hero.jpg" alt="Ankara Ahşap Duvar Paneli" class="blog-card-img">
                     </div>
                     <div class="blog-card-content">
                         <div class="blog-card-meta">
                             <span><i class="far fa-calendar-alt"></i> 6 Ağustos 2026</span>
-                            <span><i class="far fa-user"></i> Duvar Dekorasyonu</span>
+                            <span data-translate="blog-author-6"><i class="far fa-user"></i> Duvar Dekorasyonu</span>
                         </div>
-                        <h3 class="blog-card-title"><a href="blog/ankara-ahsap-duvar-paneli-modelleri.html">Ankara Ahşap Duvar Paneli Modelleri ile Duvar Dekorasyonu</a></h3>
-                        <p class="blog-card-excerpt">Doğallığın ve zarafetin duvarlarınıza yansıması. Ankara'da ahşap duvar paneli uygulamalarımız, akustik ahşap paneller ve modern mimari tasarımlar.</p>
-                        <a href="blog/ankara-ahsap-duvar-paneli-modelleri.html" class="blog-card-link">Devamını Oku <i class="fas fa-arrow-right"></i></a>
+                        <h3 class="blog-card-title"><a href="blog/ankara-ahsap-duvar-paneli-modelleri.html" data-translate="blog-t-6">Ankara Ahşap Duvar Paneli Modelleri ile Duvar Dekorasyonu</a></h3>
+                        <p class="blog-card-excerpt" data-translate="blog-exc-6-full">Doğallığın ve zarafetin duvarlarınıza yansıması. Ankara'da ahşap duvar paneli uygulamalarımız, akustik ahşap paneller ve modern mimari tasarımlar.</p>
+                        <a href="blog/ankara-ahsap-duvar-paneli-modelleri.html" class="blog-card-link" data-translate="blog-readmore">Devamını Oku <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
 
@@ -177,8 +184,8 @@
     <footer class="footer">
         <div class="container footer-container">
             <div class="footer-brand">
-                <div class="footer-brand-title">ELİZİ <span class="footer-sub-brand">DİZAYN & MOBİLYA</span></div>
-                <p>Siteler'den yükselen zanaat, evinizdeki kusursuz konfor.</p>
+                <div class="footer-brand-title">ELİZİ <span class="footer-sub-brand" data-translate="footer-subbrand">DİZAYN & MOBİLYA</span></div>
+                <p data-translate="footer-desc">Siteler'den yükselen zanaat, evinizdeki kusursuz konfor.</p>
                 <div class="footer-socials">
                     <a href="https://www.instagram.com/elizidizayn.mobilya/" target="_blank"><i class="fab fa-instagram"></i></a>
                     <a href="https://wa.me/905368946008" target="_blank"><i class="fab fa-whatsapp"></i></a>
@@ -187,46 +194,26 @@
             </div>
             
             <div class="footer-links">
-                <h4>Hızlı Erişim</h4>
-                <a href="index.html#home">Ana Sayfa</a>
-                <a href="index.html#collections">Koleksiyonlar</a>
-                <a href="index.html#craftsmanship">Ustalık & Ahşap</a>
-                <a href="blog.html">Blog & Rehberler</a>
-                <a href="index.html#contact">İletişim</a>
+                <h4 data-translate="footer-h-links">Hızlı Erişim</h4>
+                <a href="index.html#home" data-translate="nav-home">Ana Sayfa</a>
+                <a href="index.html#collections" data-translate="nav-collections">Koleksiyonlar</a>
+                <a href="index.html#craftsmanship" data-translate="nav-craftsmanship">Ustalık & Ahşap</a>
+                <a href="blog.html" data-translate="nav-blog">Blog & Rehberler</a>
+                <a href="index.html#contact" data-translate="nav-contact">İletişim</a>
             </div>
 
             <div class="footer-hours">
-                <h4>Çalışma Saatleri</h4>
-                <p>Pazartesi - Cumartesi: 09:00 - 19:30</p>
-                <p>Pazar: 11:30 - 18:00 (Randevu ile)</p>
+                <h4 data-translate="footer-h-hours">Çalışma Saatleri</h4>
+                <p data-translate="footer-hours-1">Pazartesi - Cumartesi: 09:00 - 19:30</p>
+                <p data-translate="footer-hours-2">Pazar: 11:30 - 18:00 (Randevu ile)</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Elizi Dizayn & Mobilya. Tüm Hakları Saklıdır. Designed by <a href="https://alperenborklu.com" target="_blank">Alperen Börklü</a></p>
+            <p data-translate="footer-copy">&copy; 2026 Elizi Dizayn & Mobilya. Tüm Hakları Saklıdır. Designed by <a href="https://alperenborklu.com" target="_blank">Alperen Börklü</a></p>
         </div>
     </footer>
 
-    <!-- JS script for mobile responsiveness -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-            const navMenu = document.getElementById('navMenu');
-            const navLinks = document.querySelectorAll('.nav-link');
-
-            if (mobileMenuBtn) {
-                mobileMenuBtn.addEventListener('click', () => {
-                    mobileMenuBtn.classList.toggle('active');
-                    navMenu.classList.toggle('active');
-                });
-            }
-
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    if (mobileMenuBtn) mobileMenuBtn.classList.remove('active');
-                    if (navMenu) navMenu.classList.remove('active');
-                });
-            });
-        });
-    </script>
+    <!-- Custom JavaScript -->
+    <script src="app.js?v=1.2"></script>
 </body>
 </html>
