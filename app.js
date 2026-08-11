@@ -569,4 +569,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
         startReviewInterval();
     }
+
+    // --- Preloader Dismiss ---
+    const dismissPreloader = () => {
+        const preloader = document.getElementById('preloader');
+        if (preloader) {
+            preloader.classList.add('fade-out');
+            setTimeout(() => {
+                preloader.remove();
+            }, 800);
+        }
+    };
+
+    // Safety timeout: dismiss preloader after 3 seconds anyway to not block user
+    const safetyTimeout = setTimeout(dismissPreloader, 3000);
+
+    window.addEventListener('load', () => {
+        clearTimeout(safetyTimeout);
+        dismissPreloader();
+    });
 });

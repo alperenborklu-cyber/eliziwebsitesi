@@ -2060,7 +2060,99 @@ body.dark-theme .experience-badge .text {
         right: 20px;
         left: 20px;
         justify-content: center;
-        padding: 14px 20px;
-        font-size: 0.9rem;
     }
+}
+
+/* --- Preloader Style --- */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-primary);
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), visibility 0.8s;
+}
+
+.preloader.fade-out {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.preloader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.room-outline {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rotateRoom 6s linear infinite;
+}
+
+.preloader-icon {
+    font-size: 2.2rem;
+    color: var(--accent);
+}
+
+/* Counter-rotate icon so it stays upright while the room outline rotates */
+.room-outline .preloader-icon {
+    animation: pulseCouch 2s cubic-bezier(0.4, 0, 0.6, 1) infinite, counterRotate 6s linear infinite;
+}
+
+.preloader-brand {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    letter-spacing: 0.2em;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.preloader-bar {
+    width: 120px;
+    height: 2px;
+    background-color: var(--border-light);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.preloader-progress {
+    width: 0%;
+    height: 100%;
+    background-color: var(--accent);
+    animation: loadProgress 2.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes rotateRoom {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes counterRotate {
+    0% { transform: rotate(360deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes pulseCouch {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(0.85); opacity: 0.7; }
+}
+
+@keyframes loadProgress {
+    0% { width: 0%; }
+    50% { width: 70%; }
+    100% { width: 100%; }
 }
