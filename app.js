@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const translations = {
         en: {
             "header-subbrand": "DESIGN",
+            "floating-cta": "<i class=\"fa-solid fa-calendar-check\"></i> Free Consultation",
             "nav-home": "Home",
             "nav-collections": "Collections",
             "nav-craftsmanship": "Craftsmanship",
@@ -138,6 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         tr: {
             "header-subbrand": "DİZAYN",
+            "floating-cta": "<i class=\"fa-solid fa-calendar-check\"></i> Ücretsiz Keşif Randevusu",
             "nav-home": "Ana Sayfa",
             "nav-collections": "Koleksiyonlar",
             "nav-craftsmanship": "Ustalık",

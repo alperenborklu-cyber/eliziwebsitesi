@@ -22,6 +22,8 @@
     --portfolio-overlay-bg: rgba(255, 255, 255, 0.95);
     --lightbox-bg: rgba(255, 255, 255, 0.98);
     --hero-overlay-bg: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.7) 50%, rgba(255,255,255,0.2) 100%);
+    --cta-bg: #c96f3b; /* Premium wood/earth orange */
+    --cta-hover: #b05c2e;
 }
 
 body.dark-theme {
@@ -353,24 +355,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary {
-    background-color: var(--text-primary);
-    color: #ffffff;
-    padding: 16px 36px;
-    font-size: 0.9rem;
-    font-weight: 500;
+    background-color: var(--cta-bg);
+    color: #ffffff !important;
+    padding: 18px 40px;
+    font-size: 0.95rem;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    border: 1px solid var(--text-primary);
+    border: 1px solid var(--cta-bg);
     transition: var(--transition-quick);
 }
 
 body.dark-theme .btn-primary {
-    color: #111111;
+    color: #ffffff !important;
 }
 
 .btn-primary:hover {
     background-color: transparent;
-    color: var(--text-primary);
+    color: var(--cta-bg);
+    border-color: var(--cta-bg);
     transform: translateY(-3px);
 }
 
@@ -2010,4 +2013,54 @@ body.dark-theme .experience-badge .text {
 
 .email-popup-success i {
     margin-right: 8px;
+}
+
+/* --- Floating CTA Button --- */
+.floating-cta {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--cta-bg);
+    color: #ffffff !important;
+    padding: 16px 28px;
+    border-radius: 50px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 600;
+    box-shadow: 0 10px 30px rgba(201, 111, 59, 0.3);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: var(--transition-quick);
+    animation: pulseCta 2s infinite;
+}
+
+.floating-cta:hover {
+    background-color: var(--cta-hover);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(201, 111, 59, 0.4);
+}
+
+@keyframes pulseCta {
+    0% {
+        box-shadow: 0 0 0 0 rgba(201, 111, 59, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(201, 111, 59, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(201, 111, 59, 0);
+    }
+}
+
+@media (max-width: 768px) {
+    .floating-cta {
+        bottom: 20px;
+        right: 20px;
+        left: 20px;
+        justify-content: center;
+        padding: 14px 20px;
+        font-size: 0.9rem;
+    }
 }
