@@ -270,4 +270,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         startReviewInterval();
+    }
 });
