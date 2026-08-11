@@ -573,6 +573,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- Preloader Dismiss ---
+    const preloaderStartTime = Date.now();
+    const minPreloaderDuration = 5000; // Enforce at least 5 seconds of the scanning animation
+
     const dismissPreloader = () => {
         const preloader = document.getElementById('preloader');
         if (preloader) {
@@ -588,6 +591,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('load', () => {
         clearTimeout(safetyTimeout);
-        dismissPreloader();
+        const timePassed = Date.now() - preloaderStartTime;
+        const remainingTime = Math.max(0, minPreloaderDuration - timePassed);
+        setTimeout(dismissPreloader, remainingTime);
     });
 });
