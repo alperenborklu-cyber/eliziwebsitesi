@@ -574,7 +574,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Preloader Dismiss ---
     const preloaderStartTime = Date.now();
-    const minPreloaderDuration = 5000; // Enforce at least 5 seconds of the scanning animation
+    const minPreloaderDuration = 3500; // Enforce at least 3.5 seconds of the scanning animation
 
     const dismissPreloader = () => {
         const preloader = document.getElementById('preloader');
@@ -582,12 +582,12 @@ document.addEventListener('DOMContentLoaded', () => {
             preloader.classList.add('fade-out');
             setTimeout(() => {
                 preloader.remove();
-            }, 2400);
+            }, 1700);
         }
     };
 
-    // Safety timeout: dismiss preloader after 9 seconds anyway to not block user
-    const safetyTimeout = setTimeout(dismissPreloader, 9000);
+    // Safety timeout: dismiss preloader after 6.3 seconds anyway to not block user
+    const safetyTimeout = setTimeout(dismissPreloader, 6300);
 
     window.addEventListener('load', () => {
         clearTimeout(safetyTimeout);

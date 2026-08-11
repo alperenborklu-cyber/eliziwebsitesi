@@ -2083,7 +2083,7 @@ body.dark-theme .experience-badge .text {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: opacity 2.4s cubic-bezier(0.25, 1, 0.5, 1), visibility 2.4s;
+    transition: opacity 1.7s cubic-bezier(0.25, 1, 0.5, 1), visibility 1.7s;
 }
 
 .preloader-content {
@@ -2116,7 +2116,7 @@ body.dark-theme .experience-badge .text {
     width: 100%;
     height: 0%;
     overflow: hidden;
-    animation: fillFingerprint 6.6s ease-in-out infinite;
+    animation: fillFingerprint 4.6s ease-in-out infinite;
 }
 
 .fingerprint-active {
@@ -2135,7 +2135,7 @@ body.dark-theme .experience-badge .text {
     background-color: var(--accent);
     box-shadow: 0 0 10px var(--accent), 0 0 20px var(--accent);
     top: 0%;
-    animation: scanLineMove 6.6s ease-in-out infinite;
+    animation: scanLineMove 4.6s ease-in-out infinite;
 }
 
 .preloader-brand {
