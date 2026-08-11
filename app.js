@@ -3,26 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Theme Switcher ---
     const themeToggle = document.getElementById('themeToggle');
     if (themeToggle) {
-        // Update icon based on initial theme
-        const updateThemeIcon = (theme) => {
-            const icon = themeToggle.querySelector('i');
-            if (icon) {
-                if (theme === 'dark') {
-                    icon.className = 'fa-regular fa-sun';
-                } else {
-                    icon.className = 'fa-solid fa-moon';
-                }
-            }
-        };
-
-        const currentTheme = localStorage.getItem('eliziTheme') || 'light';
-        updateThemeIcon(currentTheme);
-
         themeToggle.addEventListener('click', () => {
             const isDark = document.body.classList.toggle('dark-theme');
-            const newTheme = isDark ? 'dark' : 'light';
-            localStorage.setItem('eliziTheme', newTheme);
-            updateThemeIcon(newTheme);
+            localStorage.setItem('eliziTheme', isDark ? 'dark' : 'light');
         });
     }
 

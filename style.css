@@ -58,6 +58,28 @@ body.dark-theme {
     transition: var(--transition-quick);
 }
 
+.btn-theme-toggle .theme-icon {
+    width: 18px;
+    height: 18px;
+    stroke: currentColor;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.btn-theme-toggle .sun-icon {
+    display: none;
+}
+.btn-theme-toggle .moon-icon {
+    display: block;
+}
+
+body.dark-theme .btn-theme-toggle .sun-icon {
+    display: block;
+}
+body.dark-theme .btn-theme-toggle .moon-icon {
+    display: none;
+}
+
 .btn-theme-toggle:hover, .btn-lang-toggle:hover {
     border-color: var(--accent);
     color: var(--accent);
