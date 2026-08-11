@@ -171,4 +171,63 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // --- Email Subscription Popup Logic ---
+    const emailPopup = document.getElementById('emailPopup');
+    const emailPopupClose = document.getElementById('emailPopupClose');
+    const emailPopupForm = document.getElementById('emailPopupForm');
+    const emailPopupSuccess = document.getElementById('emailPopupSuccess');
+    const popupEmailInput = document.getElementById('popupEmailInput');
+
+    if (emailPopup) {
+        // Show popup after 5 seconds delay if not closed/subscribed before
+        const isPopupClosed = localStorage.getItem('eliziEmailPopupClosed');
+        const isSubscribed = localStorage.getItem('eliziSubscribed');
+
+        if (!isPopupClosed && !isSubscribed) {
+            setTimeout(() => {
+                emailPopup.classList.add('active');
+            }, 5000);
+        }
+
+        // Close functions
+        const closePopup = () => {
+            emailPopup.classList.remove('active');
+            localStorage.setItem('eliziEmailPopupClosed', 'true');
+        };
+
+        if (emailPopupClose) {
+            emailPopupClose.addEventListener('click', closePopup);
+        }
+
+        // Close on clicking outside content
+        emailPopup.addEventListener('click', (e) => {
+            if (e.target === emailPopup) {
+                closePopup();
+            }
+        });
+
+        // Form Submit
+        if (emailPopupForm) {
+            emailPopupForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const email = popupEmailInput.value;
+                
+                // Save to localStorage
+                localStorage.setItem('eliziSubscribed', 'true');
+                localStorage.setItem('eliziSubscribedEmail', email);
+
+                // Show success state
+                emailPopupForm.style.display = 'none';
+                if (emailPopupSuccess) {
+                    emailPopupSuccess.style.display = 'block';
+                }
+
+                // Close after a brief delay
+                setTimeout(() => {
+                    emailPopup.classList.remove('active');
+                }, 2500);
+            });
+        }
+    }
 });

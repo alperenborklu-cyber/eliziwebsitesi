@@ -463,6 +463,27 @@
         <div class="lightbox-caption" id="lightboxCaption"></div>
     </div>
 
+    <!-- Email Subscription Popup Modal -->
+    <div class="email-popup-overlay" id="emailPopup">
+        <div class="email-popup-content">
+            <button class="email-popup-close" id="emailPopupClose" aria-label="Kapat">&times;</button>
+            <div class="email-popup-body">
+                <div class="email-popup-icon">
+                    <i class="fa-regular fa-envelope-open"></i>
+                </div>
+                <h3>Elizi Tasarım Dünyası</h3>
+                <p>Eviniz için ilham verici iç mimari fikirleri, en yeni el işçiliği koleksiyonlarımız ve özel tekliflerimizden ilk siz haberdar olun.</p>
+                <form id="emailPopupForm" class="email-popup-form">
+                    <input type="email" id="popupEmailInput" placeholder="E-posta adresinizi yazın..." required>
+                    <button type="submit" class="btn-primary">Kayıt Ol</button>
+                </form>
+                <div class="email-popup-success" id="emailPopupSuccess">
+                    <i class="fa-solid fa-circle-check"></i> Aramıza hoş geldiniz! E-posta adresiniz kaydedildi.
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Custom JavaScript -->
     <script src="app.js"></script>
 </body>
