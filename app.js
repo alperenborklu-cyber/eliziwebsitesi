@@ -579,12 +579,12 @@ document.addEventListener('DOMContentLoaded', () => {
             preloader.classList.add('fade-out');
             setTimeout(() => {
                 preloader.remove();
-            }, 1200);
+            }, 2400);
         }
     };
 
-    // Safety timeout: dismiss preloader after 4.5 seconds anyway to not block user
-    const safetyTimeout = setTimeout(dismissPreloader, 4500);
+    // Safety timeout: dismiss preloader after 9 seconds anyway to not block user
+    const safetyTimeout = setTimeout(dismissPreloader, 9000);
 
     window.addEventListener('load', () => {
         clearTimeout(safetyTimeout);
