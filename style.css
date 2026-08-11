@@ -2075,13 +2075,15 @@ body.dark-theme .experience-badge .text {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: opacity 2.4s cubic-bezier(0.25, 1, 0.5, 1), visibility 2.4s;
+    opacity: 1;
+    visibility: visible;
 }
 
 .preloader.fade-out {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+    transition: opacity 2.4s cubic-bezier(0.25, 1, 0.5, 1), visibility 2.4s;
 }
 
 .preloader-content {
