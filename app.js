@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         en: {
             "header-subbrand": "DESIGN",
             "floating-cta": "<i class=\"fa-solid fa-calendar-check\"></i> Free Consultation",
+            "preloader-subtitle": "The Unique Print of Craftsmanship",
             "nav-home": "Home",
             "nav-collections": "Collections",
             "nav-craftsmanship": "Craftsmanship",
@@ -140,6 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
         tr: {
             "header-subbrand": "DİZAYN",
             "floating-cta": "<i class=\"fa-solid fa-calendar-check\"></i> Ücretsiz Keşif Randevusu",
+            "preloader-subtitle": "Zanaatın Benzersiz İzi",
             "nav-home": "Ana Sayfa",
             "nav-collections": "Koleksiyonlar",
             "nav-craftsmanship": "Ustalık",

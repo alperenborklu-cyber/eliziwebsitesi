@@ -2088,71 +2088,79 @@ body.dark-theme .experience-badge .text {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 25px;
+    gap: 20px;
 }
 
-.room-outline {
+/* Fingerprint Scanning Animation container */
+.fingerprint-wrapper {
     position: relative;
-    width: 80px;
-    height: 80px;
-    border: 2px solid var(--border-color);
-    border-radius: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: rotateRoom 9s linear infinite;
+    width: 90px;
+    height: 100px;
+    margin-bottom: 10px;
 }
 
-.preloader-icon {
-    font-size: 2.2rem;
+.fingerprint-bg {
+    font-size: 5.5rem;
+    color: var(--border-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.fingerprint-active-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    overflow: hidden;
+    animation: fillFingerprint 3.3s ease-in-out infinite;
+}
+
+.fingerprint-active {
+    font-size: 5.5rem;
     color: var(--accent);
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-/* Counter-rotate icon so it stays upright while the room outline rotates */
-.room-outline .preloader-icon {
-    animation: pulseCouch 3s cubic-bezier(0.4, 0, 0.6, 1) infinite, counterRotate 9s linear infinite;
+.scan-line {
+    position: absolute;
+    left: -5%;
+    width: 110%;
+    height: 3px;
+    background-color: var(--accent);
+    box-shadow: 0 0 10px var(--accent), 0 0 20px var(--accent);
+    top: 0%;
+    animation: scanLineMove 3.3s ease-in-out infinite;
 }
 
 .preloader-brand {
     font-family: var(--font-heading);
-    font-size: 1.8rem;
-    letter-spacing: 0.2em;
+    font-size: 2.2rem;
+    letter-spacing: 0.25em;
     color: var(--text-primary);
     font-weight: 600;
+    margin-bottom: 5px;
 }
 
-.preloader-bar {
-    width: 120px;
-    height: 2px;
-    background-color: var(--border-light);
-    border-radius: 4px;
-    overflow: hidden;
+.preloader-subtitle {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    font-weight: 400;
 }
 
-.preloader-progress {
-    width: 0%;
-    height: 100%;
-    background-color: var(--accent);
-    animation: loadProgress 3.3s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+@keyframes fillFingerprint {
+    0%, 100% { height: 0%; }
+    50% { height: 100%; }
 }
 
-@keyframes rotateRoom {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-@keyframes counterRotate {
-    0% { transform: rotate(360deg); }
-    100% { transform: rotate(0deg); }
-}
-
-@keyframes pulseCouch {
-    0%, 100% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(0.85); opacity: 0.7; }
-}
-
-@keyframes loadProgress {
-    0% { width: 0%; }
-    50% { width: 70%; }
-    100% { width: 100%; }
+@keyframes scanLineMove {
+    0%, 100% { top: 0%; opacity: 0; }
+    5%, 95% { opacity: 1; }
+    50% { top: 100%; }
 }
