@@ -922,6 +922,19 @@ body.dark-theme .experience-badge .text {
     margin-top: 40px;
 }
 
+.contact-info-cards-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+@media (max-width: 992px) {
+    .contact-info-cards-row {
+        grid-template-columns: 1fr;
+    }
+}
+
 .contact-info-cards {
     display: flex;
     flex-direction: column;
