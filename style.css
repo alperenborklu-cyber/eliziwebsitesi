@@ -671,44 +671,56 @@ body.dark-theme .btn-primary {
 .coll-hero-badge {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    padding: 6px 18px;
+    gap: 8px;
+    padding: 6px 16px;
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(197, 160, 89, 0.4);
     border-radius: 40px;
     backdrop-filter: blur(12px);
     margin-bottom: 22px;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    max-width: 100%;
 }
 
 .coll-badge-dot {
-    width: 7px;
-    height: 7px;
+    width: 6px;
+    height: 6px;
     background-color: var(--accent);
     border-radius: 50%;
-    box-shadow: 0 0 10px var(--accent);
+    box-shadow: 0 0 8px var(--accent);
     display: inline-block;
+    flex-shrink: 0;
 }
 
 .coll-badge-title {
-    font-size: 0.82rem;
-    font-weight: 600;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
     color: #ffffff;
+    white-space: nowrap;
+    flex-shrink: 0;
+    text-transform: none;
 }
 
 .coll-badge-sep {
     color: var(--accent);
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
     opacity: 0.8;
 }
 
 .coll-badge-sub {
-    font-size: 0.82rem;
-    font-weight: 500;
-    letter-spacing: 0.18em;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--accent);
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 /* Title & Description */
@@ -2069,6 +2081,22 @@ body.dark-theme .experience-badge .text {
         opacity: 1;
         transform: translateY(0);
         pointer-events: auto;
+    }
+    .coll-hero-badge {
+        padding: 4px 12px;
+        gap: 6px;
+        margin-bottom: 16px;
+    }
+    .coll-badge-title {
+        font-size: 0.72rem;
+        letter-spacing: 0.04em;
+    }
+    .coll-badge-sep {
+        font-size: 0.65rem;
+    }
+    .coll-badge-sub {
+        font-size: 0.72rem;
+        letter-spacing: 0.08em;
     }
     .coll-hero-overlay {
         background: linear-gradient(180deg, rgba(8, 8, 8, 0.25) 0%, transparent 20%, rgba(8, 8, 8, 0.85) 85%);
