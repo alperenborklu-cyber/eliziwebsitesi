@@ -1372,6 +1372,34 @@ body.dark-theme .experience-badge .text {
     font-weight: 300;
 }
 
+.footer-address {
+    margin-top: 4px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-address a {
+    color: #cccccc;
+    font-size: 0.92rem;
+    font-weight: 300;
+    line-height: 1.55;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 8px;
+    transition: var(--transition-quick);
+}
+
+.footer-address a:hover {
+    color: var(--accent);
+}
+
+.footer-address a i {
+    color: var(--accent);
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
 .footer-bottom {
     padding-top: 30px;
     text-align: center;
