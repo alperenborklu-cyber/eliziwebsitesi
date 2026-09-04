@@ -622,6 +622,14 @@ body.dark-theme .btn-primary {
     object-position: center 52%;
 }
 
+.coll-img-openoffice {
+    object-position: center 38%; /* Shows custom wood ceiling lattice, bar counter, and planter separators */
+}
+
+.coll-img-sculptural {
+    object-position: center 50%; /* Accents the sculptural executive desk base, brass trims, and wood wall panels */
+}
+
 .coll-hero-slide.active .coll-hero-img {
     transform: scale(1);
 }
@@ -834,6 +842,41 @@ body.dark-theme .btn-primary {
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 140px;
+}
+
+@media (max-width: 992px) {
+    .coll-indicators {
+        gap: 14px;
+    }
+    .coll-indicator-btn {
+        width: 110px;
+    }
+    .coll-indicator-label {
+        font-size: 0.72rem;
+        max-width: 110px;
+    }
+}
+
+@media (max-width: 768px) {
+    .coll-controls-container {
+        bottom: 20px;
+    }
+    .coll-indicators {
+        gap: 8px;
+        width: 100%;
+        justify-content: center;
+    }
+    .coll-indicator-btn {
+        width: auto;
+        flex: 1;
+        max-width: 65px;
+    }
+    .coll-indicator-label {
+        display: none;
+    }
+    .coll-indicator-num {
+        font-size: 0.7rem;
+    }
 }
 
 /* --- Craftsmanship Section --- */
