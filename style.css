@@ -609,23 +609,41 @@ body.dark-theme .btn-primary {
     transition: transform 8s cubic-bezier(0.1, 0.5, 0.2, 1);
 }
 
+/* Custom Image Positioning to Highlight Woodwork */
+.coll-img-reception {
+    object-position: center 38%;
+}
+
+.coll-img-bathroom {
+    object-position: center 82%; /* Perfectly brings the fluted wood vanity and shelf into view */
+}
+
+.coll-img-executive {
+    object-position: center 52%;
+}
+
 .coll-hero-slide.active .coll-hero-img {
     transform: scale(1);
 }
 
-/* Rich Cinema Gradients for Legibility */
+/* Wood-First Overlay: Crystal Clear by Default, Subtle Gradient on Hover */
 .coll-hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, rgba(8, 8, 8, 0.90) 0%, rgba(8, 8, 8, 0.65) 45%, rgba(8, 8, 8, 0.30) 100%),
-                linear-gradient(180deg, rgba(8, 8, 8, 0.45) 0%, transparent 35%, rgba(8, 8, 8, 0.85) 100%);
+    background: linear-gradient(180deg, rgba(8, 8, 8, 0.15) 0%, transparent 40%, rgba(8, 8, 8, 0.55) 100%);
+    transition: background 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     pointer-events: none;
 }
 
-/* Content Container & Staggered Animations */
+.collections-hero-section:hover .coll-hero-overlay {
+    background: linear-gradient(90deg, rgba(8, 8, 8, 0.88) 0%, rgba(8, 8, 8, 0.52) 48%, rgba(8, 8, 8, 0.18) 100%),
+                linear-gradient(180deg, rgba(8, 8, 8, 0.3) 0%, transparent 35%, rgba(8, 8, 8, 0.78) 100%);
+}
+
+/* Content Container - Revealed on Mouse Hover Only */
 .coll-hero-container {
     position: relative;
     z-index: 3;
@@ -636,45 +654,17 @@ body.dark-theme .btn-primary {
 .coll-hero-content {
     max-width: 720px;
     color: #ffffff;
-}
-
-@keyframes collFadeSlideUp {
-    0% {
-        opacity: 0;
-        transform: translateY(28px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.coll-hero-badge,
-.coll-slide-category,
-.coll-slide-title,
-.coll-slide-description,
-.coll-slide-actions {
     opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1), transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: none;
 }
 
-.coll-hero-slide.active .coll-hero-badge {
-    animation: collFadeSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
-}
-
-.coll-hero-slide.active .coll-slide-category {
-    animation: collFadeSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
-}
-
-.coll-hero-slide.active .coll-slide-title {
-    animation: collFadeSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.45s forwards;
-}
-
-.coll-hero-slide.active .coll-slide-description {
-    animation: collFadeSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
-}
-
-.coll-hero-slide.active .coll-slide-actions {
-    animation: collFadeSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.75s forwards;
+/* Text only appears when hovering over the section */
+.collections-hero-section:hover .coll-hero-slide.active .coll-hero-content {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
 }
 
 /* Badge Pill */
@@ -715,23 +705,13 @@ body.dark-theme .btn-primary {
 
 .coll-badge-sub {
     font-size: 0.82rem;
-    font-weight: 400;
-    letter-spacing: 0.15em;
+    font-weight: 500;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--accent);
 }
 
-/* Category & Titles */
-.coll-slide-category {
-    display: block;
-    font-size: 0.95rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.22em;
-    color: var(--accent);
-    margin-bottom: 12px;
-}
-
+/* Title & Description */
 .coll-slide-title {
     font-size: clamp(2.1rem, 3.8vw, 3.3rem);
     font-weight: 300;
@@ -744,50 +724,25 @@ body.dark-theme .btn-primary {
 .coll-slide-description {
     font-size: 1.05rem;
     line-height: 1.75;
-    color: rgba(255, 255, 255, 0.84);
+    color: rgba(255, 255, 255, 0.86);
     margin-bottom: 35px;
     font-weight: 300;
     max-width: 640px;
 }
 
-/* Action Buttons */
+/* Action Button */
 .coll-slide-actions {
     display: flex;
     gap: 16px;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 .coll-slide-actions .btn-primary {
-    padding: 16px 32px;
-    font-size: 0.88rem;
+    padding: 16px 36px;
+    font-size: 0.9rem;
 }
 
-.coll-fullscreen-btn {
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    color: #ffffff;
-    padding: 16px 30px;
-    font-size: 0.88rem;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    transition: var(--transition-quick);
-    backdrop-filter: blur(8px);
-}
-
-.coll-fullscreen-btn:hover {
-    background: var(--accent);
-    border-color: var(--accent);
-    color: #ffffff;
-    transform: translateY(-3px);
-}
-
-/* Controls Bar (Indicators & Navigation Arrows) */
+/* Controls Bar (Centered Indicators) */
 .coll-controls-container {
     position: absolute;
     bottom: 35px;
@@ -795,17 +750,13 @@ body.dark-theme .btn-primary {
     right: 0;
     z-index: 10;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-end;
     pointer-events: none;
 }
 
-.coll-indicators,
-.coll-nav-arrows {
-    pointer-events: auto;
-}
-
 .coll-indicators {
+    pointer-events: auto;
     display: flex;
     gap: 24px;
     align-items: center;
@@ -820,7 +771,7 @@ body.dark-theme .btn-primary {
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
-    opacity: 0.45;
+    opacity: 0.55;
     transition: opacity 0.3s ease;
     width: 140px;
 }
@@ -871,35 +822,6 @@ body.dark-theme .btn-primary {
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 140px;
-}
-
-/* Arrow Navigation */
-.coll-nav-arrows {
-    display: flex;
-    gap: 12px;
-}
-
-.coll-arrow-btn {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-    cursor: pointer;
-    backdrop-filter: blur(8px);
-    transition: var(--transition-quick);
-}
-
-.coll-arrow-btn:hover {
-    background: var(--accent);
-    border-color: var(--accent);
-    color: #ffffff;
-    transform: scale(1.08);
 }
 
 /* --- Craftsmanship Section --- */
@@ -2108,12 +2030,23 @@ body.dark-theme .experience-badge .text {
     /* Collections Hero Mobile */
     .collections-hero-section {
         height: auto;
-        min-height: 580px;
-        padding-top: 60px;
+        min-height: 560px;
+        padding-top: 50px;
         padding-bottom: 90px;
     }
     .coll-hero-container {
         padding-bottom: 25px;
+    }
+    .coll-hero-content {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+    .coll-hero-overlay {
+        background: linear-gradient(180deg, rgba(8, 8, 8, 0.25) 0%, transparent 20%, rgba(8, 8, 8, 0.85) 85%);
+    }
+    .coll-img-bathroom {
+        object-position: center 85%;
     }
     .coll-slide-title {
         font-size: 1.85rem;
@@ -2125,9 +2058,7 @@ body.dark-theme .experience-badge .text {
     }
     .coll-controls-container {
         bottom: 20px;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
+        justify-content: center;
     }
     .coll-indicators {
         gap: 12px;
@@ -2135,23 +2066,17 @@ body.dark-theme .experience-badge .text {
         justify-content: center;
     }
     .coll-indicator-btn {
-        width: 60px;
+        width: 65px;
     }
     .coll-indicator-label {
         display: none;
     }
-    .coll-nav-arrows {
-        display: none;
-    }
     .coll-slide-actions {
-        flex-direction: column;
         width: 100%;
-        gap: 12px;
     }
-    .coll-slide-actions .btn-primary,
-    .coll-slide-actions .coll-fullscreen-btn {
+    .coll-slide-actions .btn-primary {
         width: 100%;
-        justify-content: center;
+        text-align: center;
     }
     
     /* Mobile Menu Navigation */

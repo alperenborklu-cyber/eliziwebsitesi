@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "hl-desc-2": "We use premium oak, walnut, natural veneers, and high-quality wood panel components.",
             "hl-title-3": "Project-Based Production",
             "hl-desc-3": "Instead of retail product sales, we handle all custom fixed and loose woodwork needed for your space.",
-            "coll-subtitle": "Premium Selection",
+            "coll-subtitle": "PREMIUM SELECTION",
             "coll-title": "Elizi Collections",
             "port-desc-1": "Custom reception desks and wood paneling designed with integrated lighting for modern lobbies and office spaces.",
             "port-cat-1": "Reception Project",
@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "hl-desc-2": "Birinci sınıf meşe, ceviz, doğal kaplama ve birinci kalite ahşap panel bileşenleri kullanıyoruz.",
             "hl-title-3": "Proje Bazlı Üretim",
             "hl-desc-3": "Tekli ürün satışı yerine, mekanınız için gerekli tüm sabit ve hareketli ahşap imalatını üstleniyoruz.",
-            "coll-subtitle": "Premium Seçki",
+            "coll-subtitle": "PREMIUM SEÇKİ",
             "coll-title": "Elizi Koleksiyonları",
             "port-desc-1": "Lobi ve karşılama alanları için özel üretilen masif meşe detaylı bankolar, gizli LED aydınlatmalı duvar panelleri ve bütünsel mimari çözümler.",
             "port-cat-1": "Karşılama Bankosu Projesi",
@@ -343,9 +343,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const collSliderSection = document.getElementById('collections');
     const collSlides = document.querySelectorAll('.coll-hero-slide');
     const collIndicators = document.querySelectorAll('.coll-indicator-btn');
-    const collPrevBtn = document.getElementById('collPrevBtn');
-    const collNextBtn = document.getElementById('collNextBtn');
-    const collFullscreenBtns = document.querySelectorAll('.coll-fullscreen-btn');
 
     if (collSlides.length > 0) {
         let currentSlide = 0;
@@ -419,23 +416,6 @@ document.addEventListener('DOMContentLoaded', () => {
             startTimer();
         }
 
-        // Navigation Arrows
-        if (collPrevBtn) {
-            collPrevBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                prevSlide();
-                resetTimer();
-            });
-        }
-
-        if (collNextBtn) {
-            collNextBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                nextSlide();
-                resetTimer();
-            });
-        }
-
         // Indicators Click
         collIndicators.forEach(btn => {
             btn.addEventListener('click', (e) => {
@@ -504,24 +484,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const lightboxImg = document.getElementById('lightboxImg');
     const lightboxCaption = document.getElementById('lightboxCaption');
     const closeBtn = document.querySelector('.lightbox-close');
-
-    // Lightbox triggers for Collections Hero Slider
-    if (collFullscreenBtns) {
-        collFullscreenBtns.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                const imgSrc = btn.getAttribute('data-img');
-                const title = btn.getAttribute('data-title');
-                if (lightbox && lightboxImg && lightboxCaption) {
-                    lightbox.style.display = 'block';
-                    lightboxImg.src = imgSrc;
-                    lightboxCaption.textContent = title;
-                    document.body.style.overflow = 'hidden';
-                }
-            });
-        });
-    }
 
     // Close Lightbox
     if (closeBtn) {
