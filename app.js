@@ -42,6 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
             "port-desc-3": "Premium oval executive desks crafted with custom timber, marble integrations, and matching built-in luxury bookshelves.",
             "port-cat-3": "Executive Office Project",
             "port-title-3": "Luxury Office Suite & Bespoke Executive Workstation",
+            "coll-btn-fullscreen": "<i class=\"fa-solid fa-expand\"></i> View Fullscreen",
+            "coll-btn-cta": "Get a Quote & Discovery",
             "craft-badge-1": "Siteler",
             "craft-badge-2": "Craftsmanship",
             "craft-subtitle": "Following Tradition",
@@ -152,6 +154,8 @@ document.addEventListener('DOMContentLoaded', () => {
             "port-desc-3": "Oval hatlara sahip lüks ahşap makam masaları, bütünleşik mermer detaylar ve arka planda uyumlu kitaplık ile duvar paneli tasarımları.",
             "port-cat-3": "Makam Odası Projesi",
             "port-title-3": "Premium Yönetici Odası & Bespoke Makam Masası",
+            "coll-btn-fullscreen": "<i class=\"fa-solid fa-expand\"></i> Fotoğrafı Büyüt",
+            "coll-btn-cta": "Teklif & Keşif Alın",
             "craft-badge-1": "Siteler",
             "craft-badge-2": "Ustalığı",
             "craft-subtitle": "Geleneğin İzinde",
@@ -335,58 +339,189 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     window.addEventListener('scroll', highlightNav);
 
-    // --- Portfolio Filtering ---
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const portfolioCards = document.querySelectorAll('.portfolio-card');
+    // --- Collections Hero Slider Controller ---
+    const collSliderSection = document.getElementById('collections');
+    const collSlides = document.querySelectorAll('.coll-hero-slide');
+    const collIndicators = document.querySelectorAll('.coll-indicator-btn');
+    const collPrevBtn = document.getElementById('collPrevBtn');
+    const collNextBtn = document.getElementById('collNextBtn');
+    const collFullscreenBtns = document.querySelectorAll('.coll-fullscreen-btn');
 
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            // Remove active class from other buttons
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
+    if (collSlides.length > 0) {
+        let currentSlide = 0;
+        const totalSlides = collSlides.length;
+        const slideDuration = 5500;
+        let slideTimer = null;
+        let isPaused = false;
 
-            const filterValue = button.getAttribute('data-filter');
+        function updateSlide(index) {
+            currentSlide = (index + totalSlides) % totalSlides;
 
-            portfolioCards.forEach(card => {
-                const category = card.getAttribute('data-category');
-                if (filterValue === 'all' || category === filterValue) {
-                    card.style.display = 'block';
-                    // Trigger simple fade-in
-                    setTimeout(() => {
-                        card.style.opacity = '1';
-                        card.style.transform = 'translateY(0)';
-                    }, 50);
+            // Update Slides
+            collSlides.forEach((slide, i) => {
+                if (i === currentSlide) {
+                    slide.classList.add('active');
                 } else {
-                    card.style.opacity = '0';
-                    card.style.transform = 'translateY(10px)';
-                    setTimeout(() => {
-                        card.style.display = 'none';
-                    }, 300);
+                    slide.classList.remove('active');
+                }
+            });
+
+            // Update Indicators
+            collIndicators.forEach((btn, i) => {
+                if (i === currentSlide) {
+                    btn.classList.add('active');
+                    const bar = btn.querySelector('.coll-indicator-bar');
+                    if (bar) {
+                        bar.style.transition = 'none';
+                        bar.style.width = '0%';
+                        void bar.offsetWidth; // Force reflow
+                        bar.style.transition = `width ${slideDuration}ms linear`;
+                        bar.style.width = '100%';
+                    }
+                } else {
+                    btn.classList.remove('active');
+                    const bar = btn.querySelector('.coll-indicator-bar');
+                    if (bar) {
+                        bar.style.transition = 'none';
+                        bar.style.width = '0%';
+                    }
+                }
+            });
+        }
+
+        function nextSlide() {
+            updateSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            updateSlide(currentSlide - 1);
+        }
+
+        function startTimer() {
+            clearInterval(slideTimer);
+            const activeIndicator = collIndicators[currentSlide];
+            if (activeIndicator) {
+                const bar = activeIndicator.querySelector('.coll-indicator-bar');
+                if (bar) {
+                    bar.style.transition = `width ${slideDuration}ms linear`;
+                    bar.style.width = '100%';
+                }
+            }
+
+            slideTimer = setInterval(() => {
+                if (!isPaused) {
+                    nextSlide();
+                }
+            }, slideDuration);
+        }
+
+        function resetTimer() {
+            startTimer();
+        }
+
+        // Navigation Arrows
+        if (collPrevBtn) {
+            collPrevBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                prevSlide();
+                resetTimer();
+            });
+        }
+
+        if (collNextBtn) {
+            collNextBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                nextSlide();
+                resetTimer();
+            });
+        }
+
+        // Indicators Click
+        collIndicators.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetSlide = parseInt(btn.getAttribute('data-slide-to'), 10);
+                if (!isNaN(targetSlide)) {
+                    updateSlide(targetSlide);
+                    resetTimer();
                 }
             });
         });
-    });
+
+        // Pause on Hover
+        if (collSliderSection) {
+            collSliderSection.addEventListener('mouseenter', () => {
+                isPaused = true;
+            });
+            collSliderSection.addEventListener('mouseleave', () => {
+                isPaused = false;
+            });
+
+            // Touch Swipe Support for Mobile
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            collSliderSection.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            collSliderSection.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                const swipeDiff = touchEndX - touchStartX;
+                if (Math.abs(swipeDiff) > 45) {
+                    if (swipeDiff < 0) {
+                        nextSlide();
+                    } else {
+                        prevSlide();
+                    }
+                    resetTimer();
+                }
+            }, { passive: true });
+        }
+
+        // Keyboard navigation when in viewport
+        document.addEventListener('keydown', (e) => {
+            if (!collSliderSection) return;
+            const rect = collSliderSection.getBoundingClientRect();
+            const isInView = rect.top < window.innerHeight && rect.bottom > 0;
+            if (isInView) {
+                if (e.key === 'ArrowLeft') {
+                    prevSlide();
+                    resetTimer();
+                } else if (e.key === 'ArrowRight') {
+                    nextSlide();
+                    resetTimer();
+                }
+            }
+        });
+
+        // Start initial auto timer
+        startTimer();
+    }
 
     // --- Lightbox Gallery Modal ---
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightboxImg');
     const lightboxCaption = document.getElementById('lightboxCaption');
     const closeBtn = document.querySelector('.lightbox-close');
-    const imageWrappers = document.querySelectorAll('.portfolio-img-wrapper');
 
-    imageWrappers.forEach(wrapper => {
-        wrapper.addEventListener('click', () => {
-            const img = wrapper.querySelector('.portfolio-img');
-            const cardInfo = wrapper.closest('.portfolio-card').querySelector('.portfolio-info h3').textContent;
-            
-            if (lightbox && lightboxImg && lightboxCaption) {
-                lightbox.style.display = 'block';
-                lightboxImg.src = img.src;
-                lightboxCaption.textContent = cardInfo;
-                document.body.style.overflow = 'hidden'; // Prevent body scroll
-            }
+    // Lightbox triggers for Collections Hero Slider
+    if (collFullscreenBtns) {
+        collFullscreenBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const imgSrc = btn.getAttribute('data-img');
+                const title = btn.getAttribute('data-title');
+                if (lightbox && lightboxImg && lightboxCaption) {
+                    lightbox.style.display = 'block';
+                    lightboxImg.src = imgSrc;
+                    lightboxCaption.textContent = title;
+                    document.body.style.overflow = 'hidden';
+                }
+            });
         });
-    });
+    }
 
     // Close Lightbox
     if (closeBtn) {

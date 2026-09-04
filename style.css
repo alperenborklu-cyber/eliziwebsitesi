@@ -542,137 +542,364 @@ body.dark-theme .btn-primary {
     font-weight: 300;
 }
 
-/* --- Collections Portfolio Section --- */
-.collections-section {
-    padding: 120px 0;
-}
-
-.filter-tabs {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-bottom: 50px;
-}
-
-.filter-btn {
-    background: none;
-    border: none;
-    font-family: var(--font-body);
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--text-muted);
-    cursor: pointer;
-    padding: 8px 16px;
-    transition: var(--transition-quick);
+/* --- Collections Hero Showcase Section --- */
+.collections-hero-section {
     position: relative;
-}
-
-.filter-btn.active, .filter-btn:hover {
-    color: var(--text-primary);
-}
-
-.filter-btn::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 1px;
-    background-color: var(--accent);
-    transition: var(--transition-quick);
-}
-
-.filter-btn.active::after {
-    width: 60%;
-}
-
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 35px;
-}
-
-.portfolio-card {
-    background-color: var(--bg-primary);
-    border: 1px solid var(--border-light);
-    overflow: hidden;
-    transition: var(--transition-smooth);
-}
-
-.portfolio-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
-}
-
-.portfolio-img-wrapper {
-    position: relative;
-    aspect-ratio: 4/3;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.portfolio-img {
     width: 100%;
-    height: 100%;
-    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    height: 85vh;
+    min-height: 640px;
+    max-height: 860px;
+    overflow: hidden;
+    background-color: #0d0d0d;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
 }
 
-.portfolio-card:hover .portfolio-img {
-    transform: scale(1.08);
-}
-
-.portfolio-overlay {
+.coll-hero-slider {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--portfolio-overlay-bg);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    opacity: 0;
-    transition: var(--transition-quick);
-    text-align: center;
+    overflow: hidden;
 }
 
-.portfolio-card:hover .portfolio-overlay {
+/* Slide Base & Crossfade Transitions */
+.coll-hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.1s cubic-bezier(0.4, 0, 0.2, 1), visibility 1.1s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.coll-hero-slide.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+    pointer-events: auto;
+}
+
+/* Background Image & Ken Burns Zoom Effect */
+.coll-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.coll-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1.08);
+    transition: transform 8s cubic-bezier(0.1, 0.5, 0.2, 1);
+}
+
+.coll-hero-slide.active .coll-hero-img {
+    transform: scale(1);
+}
+
+/* Rich Cinema Gradients for Legibility */
+.coll-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(8, 8, 8, 0.90) 0%, rgba(8, 8, 8, 0.65) 45%, rgba(8, 8, 8, 0.30) 100%),
+                linear-gradient(180deg, rgba(8, 8, 8, 0.45) 0%, transparent 35%, rgba(8, 8, 8, 0.85) 100%);
+    pointer-events: none;
+}
+
+/* Content Container & Staggered Animations */
+.coll-hero-container {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    padding-bottom: 70px;
+}
+
+.coll-hero-content {
+    max-width: 720px;
+    color: #ffffff;
+}
+
+@keyframes collFadeSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(28px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.coll-hero-badge,
+.coll-slide-category,
+.coll-slide-title,
+.coll-slide-description,
+.coll-slide-actions {
+    opacity: 0;
+}
+
+.coll-hero-slide.active .coll-hero-badge {
+    animation: collFadeSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+}
+
+.coll-hero-slide.active .coll-slide-category {
+    animation: collFadeSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+}
+
+.coll-hero-slide.active .coll-slide-title {
+    animation: collFadeSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.45s forwards;
+}
+
+.coll-hero-slide.active .coll-slide-description {
+    animation: collFadeSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
+}
+
+.coll-hero-slide.active .coll-slide-actions {
+    animation: collFadeSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.75s forwards;
+}
+
+/* Badge Pill */
+.coll-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 18px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(197, 160, 89, 0.4);
+    border-radius: 40px;
+    backdrop-filter: blur(12px);
+    margin-bottom: 22px;
+}
+
+.coll-badge-dot {
+    width: 7px;
+    height: 7px;
+    background-color: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--accent);
+    display: inline-block;
+}
+
+.coll-badge-title {
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.coll-badge-sep {
+    color: var(--accent);
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+.coll-badge-sub {
+    font-size: 0.82rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+/* Category & Titles */
+.coll-slide-category {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--accent);
+    margin-bottom: 12px;
+}
+
+.coll-slide-title {
+    font-size: clamp(2.1rem, 3.8vw, 3.3rem);
+    font-weight: 300;
+    line-height: 1.2;
+    color: #ffffff;
+    margin-bottom: 20px;
+    letter-spacing: -0.01em;
+}
+
+.coll-slide-description {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.84);
+    margin-bottom: 35px;
+    font-weight: 300;
+    max-width: 640px;
+}
+
+/* Action Buttons */
+.coll-slide-actions {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.coll-slide-actions .btn-primary {
+    padding: 16px 32px;
+    font-size: 0.88rem;
+}
+
+.coll-fullscreen-btn {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    color: #ffffff;
+    padding: 16px 30px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: var(--transition-quick);
+    backdrop-filter: blur(8px);
+}
+
+.coll-fullscreen-btn:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* Controls Bar (Indicators & Navigation Arrows) */
+.coll-controls-container {
+    position: absolute;
+    bottom: 35px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    pointer-events: none;
+}
+
+.coll-indicators,
+.coll-nav-arrows {
+    pointer-events: auto;
+}
+
+.coll-indicators {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.coll-indicator-btn {
+    background: none;
+    border: none;
+    padding: 6px 0;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    opacity: 0.45;
+    transition: opacity 0.3s ease;
+    width: 140px;
+}
+
+.coll-indicator-btn:hover,
+.coll-indicator-btn.active {
     opacity: 1;
 }
 
-.zoom-icon {
-    font-size: 1.5rem;
-    color: var(--accent);
-    margin-bottom: 15px;
+.coll-indicator-num {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 0.1em;
+    margin-bottom: 6px;
 }
 
-.portfolio-hover-desc {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    max-width: 250px;
+.coll-indicator-progress {
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 6px;
 }
 
-.portfolio-info {
-    padding: 25px;
-    border-top: 1px solid var(--border-light);
+.coll-indicator-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: var(--accent);
+    transition: width 0.1s linear;
 }
 
-.portfolio-cat {
+.coll-indicator-btn.active .coll-indicator-bar {
+    width: 100%;
+    transition: width 5.5s linear;
+}
+
+.coll-indicator-label {
     font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    color: var(--accent);
-    display: block;
-    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 140px;
 }
 
-.portfolio-info h3 {
-    font-size: 1.4rem;
-    font-weight: 400;
+/* Arrow Navigation */
+.coll-nav-arrows {
+    display: flex;
+    gap: 12px;
+}
+
+.coll-arrow-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    transition: var(--transition-quick);
+}
+
+.coll-arrow-btn:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #ffffff;
+    transform: scale(1.08);
 }
 
 /* --- Craftsmanship Section --- */
@@ -1813,6 +2040,13 @@ body.dark-theme .experience-badge .text {
         grid-template-columns: 1fr;
         gap: 40px;
     }
+    .collections-hero-section {
+        height: 75vh;
+        min-height: 580px;
+    }
+    .coll-indicator-btn {
+        width: 110px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1869,6 +2103,55 @@ body.dark-theme .experience-badge .text {
     }
     .quote-banner blockquote {
         font-size: 1.6rem;
+    }
+
+    /* Collections Hero Mobile */
+    .collections-hero-section {
+        height: auto;
+        min-height: 580px;
+        padding-top: 60px;
+        padding-bottom: 90px;
+    }
+    .coll-hero-container {
+        padding-bottom: 25px;
+    }
+    .coll-slide-title {
+        font-size: 1.85rem;
+    }
+    .coll-slide-description {
+        font-size: 0.95rem;
+        line-height: 1.65;
+        margin-bottom: 25px;
+    }
+    .coll-controls-container {
+        bottom: 20px;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .coll-indicators {
+        gap: 12px;
+        width: 100%;
+        justify-content: center;
+    }
+    .coll-indicator-btn {
+        width: 60px;
+    }
+    .coll-indicator-label {
+        display: none;
+    }
+    .coll-nav-arrows {
+        display: none;
+    }
+    .coll-slide-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+    .coll-slide-actions .btn-primary,
+    .coll-slide-actions .coll-fullscreen-btn {
+        width: 100%;
+        justify-content: center;
     }
     
     /* Mobile Menu Navigation */
