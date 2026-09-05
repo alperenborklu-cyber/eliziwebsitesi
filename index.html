@@ -7,13 +7,21 @@
     <title>Elizi Dizayn & Mobilya | Kişiye Özel Lüks Tasarımlar</title>
     <link rel="canonical" href="https://www.elizidizaynmobilya.com/">
     
+        <!-- Resource Hints & Fast Preconnect for < 0.4s response -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <!-- FontAwesome for Premium Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon_elizi_dizayn.jpeg" type="image/jpeg">
@@ -52,7 +60,7 @@
             </a>
             
             <nav class="nav-menu" id="navMenu">
-                <a href="#home" class="nav-link active" data-translate="nav-home">Ana Sayfa</a>
+                <a href="/" class="nav-link active" data-translate="nav-home">Ana Sayfa</a>
                 <a href="#collections" class="nav-link" data-translate="nav-collections">Koleksiyonlar</a>
                 <a href="/blog/" class="nav-link" data-translate="nav-blog">Blog</a>
                 <a href="#contact" class="nav-link" data-translate="nav-contact">İletişim</a>
@@ -88,7 +96,7 @@
     <!-- Hero Section -->
     <section id="home" class="hero-section">
         <div class="hero-bg">
-            <video autoplay loop muted playsinline class="hero-video">
+            <video autoplay loop muted playsinline class="hero-video" preload="metadata" poster="/assets/elizi-luks-mobilya-mimari-ahsap-projeleri.webp">
                 <source src="elizi-hero-section-video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -98,7 +106,7 @@
             <div class="hero-content">
                 <span class="hero-tagline animate-up" data-translate="hero-tagline">Sabit & Hareketli Ahşap Projeleri</span>
                 <h1 class="hero-title animate-up delay-1" data-translate="hero-title">Yaşam Alanlarınıza<br>Bütünsel Dokunuşlar</h1>
-                <p class="hero-desc animate-up delay-2" data-translate="hero-desc">Siteler Ankara'nın köklü ahşap işçiliği geleneğini modern tasarım vizyonuyla birleştiriyoruz. Tek imalat değil, yaşam alanlarınızın tamamına hitap eden kapsamlı sabit ve hareketli mobilya projeleri tasarlıyor ve üretiyoruz.</p>
+                <p class="hero-desc animate-up delay-2" data-translate="hero-desc">Siteler Ankara'nın köklü ahşap işçiliği geleneğini modern tasarım vizyonuyla birleştiriyoruz. Tekil imalat değil, yaşam alanlarınıza bütünsel dokunuşlar katan kapsamlı sabit ve hareketli ahşap mobilya projeleri tasarlıyor ve üretiyoruz.</p>
                 <div class="hero-actions-group animate-up delay-3">
                     <a href="#collections" class="btn-primary" data-translate="hero-btn-discover">Projelerimizi Keşfet</a>
                     <a href="#contact" class="btn-secondary" data-translate="hero-btn-appointment">Randevu Alın</a>
@@ -151,7 +159,7 @@
                         <h2 class="coll-slide-title" data-translate="port-title-1">Modern Karşılama Bankosu & Ahşap Panelleme</h2>
                         <p class="coll-slide-description" data-translate="port-desc-1">Lobi ve karşılama alanları için özel üretilen masif meşe detaylı bankolar, gizli LED aydınlatmalı duvar panelleri ve bütünsel mimari çözümler.</p>
                         <div class="coll-slide-actions">
-                            <a href="#contact" class="btn-primary" data-translate="coll-btn-cta">Teklif & Keşif Alın</a>
+                            <a href="#contact" class="btn-primary" data-translate="coll-btn-cta">Teklif & Keşif Alın <span class="sr-only">- Modern Karşılama Bankosu</span></a>
                         </div>
                     </div>
                 </div>
@@ -169,7 +177,7 @@
                         <h2 class="coll-slide-title" data-translate="port-title-2">Lüks Ahşap Banyo Dolabı & Konsol Tasarımı</h2>
                         <p class="coll-slide-description" data-translate="port-desc-2">Neme dayanıklı özel ahşap kaplamalar, entegre aydınlatmalı aynalar ve modern çanak lavabo konsollarıyla banyonuza özel lüks dokunuşlar.</p>
                         <div class="coll-slide-actions">
-                            <a href="#contact" class="btn-primary" data-translate="coll-btn-cta">Teklif & Keşif Alın</a>
+                            <a href="#contact" class="btn-primary" data-translate="coll-btn-cta">Teklif & Keşif Alın <span class="sr-only">- Lüks Ahşap Banyo Dolabı</span></a>
                         </div>
                     </div>
                 </div>
@@ -187,7 +195,7 @@
                         <h2 class="coll-slide-title" data-translate="port-title-3">Premium Yönetici Odası & Bespoke Makam Masası</h2>
                         <p class="coll-slide-description" data-translate="port-desc-3">Oval hatlara sahip lüks ahşap makam masaları, bütünleşik mermer detaylar ve arka planda uyumlu kitaplık ile duvar paneli tasarımları.</p>
                         <div class="coll-slide-actions">
-                            <a href="#contact" class="btn-primary" data-translate="coll-btn-cta">Teklif & Keşif Alın</a>
+                            <a href="#contact" class="btn-primary" data-translate="coll-btn-cta">Teklif & Keşif Alın <span class="sr-only">- Premium Yönetici Makam Masası</span></a>
                         </div>
                     </div>
                 </div>
@@ -205,7 +213,7 @@
                         <h2 class="coll-slide-title" data-translate="port-title-4">Modern Açık Ofis & Ahşap Seperatör Mimarisi</h2>
                         <p class="coll-slide-description" data-translate="port-desc-4">Akustik ahşap tavan kafesleri, entegre gizli aydınlatmalı saksılık seperatörler ve dinlenme alanı ada tezgahları ile çağdaş kurumsal çalışma alanları.</p>
                         <div class="coll-slide-actions">
-                            <a href="#contact" class="btn-primary" data-translate="coll-btn-cta">Teklif & Keşif Alın</a>
+                            <a href="#contact" class="btn-primary" data-translate="coll-btn-cta">Teklif & Keşif Alın <span class="sr-only">- Modern Açık Ofis Mimarisi</span></a>
                         </div>
                     </div>
                 </div>
@@ -223,7 +231,7 @@
                         <h2 class="coll-slide-title" data-translate="port-title-5">Heykelsi Makam Masası & Akustik Ahşap Panelleme</h2>
                         <p class="coll-slide-description" data-translate="port-desc-5">Özel üretim heykelsi konik ayaklı makam masası, pirinç detaylar, mermer duvar panelleri ve gizli LED aydınlatmalı çıtalı akustik ahşap duvar kaplamaları.</p>
                         <div class="coll-slide-actions">
-                            <a href="#contact" class="btn-primary" data-translate="coll-btn-cta">Teklif & Keşif Alın</a>
+                            <a href="#contact" class="btn-primary" data-translate="coll-btn-cta">Teklif & Keşif Alın <span class="sr-only">- Heykelsi Makam Masası</span></a>
                         </div>
                     </div>
                 </div>
@@ -341,7 +349,7 @@
                         </div>
                         <h3 class="blog-card-title"><a href="/blog/ankara-ozel-tasarim-mobilya-siteler/" data-translate="blog-t-1">Ankara Özel Tasarım Mobilya ve Siteler Mobilya Geleneği</a></h3>
                         <p class="blog-card-excerpt" data-translate="blog-exc-1">Ankara Siteler'in köklü ahşap işçiliği kültürünü modern mimari vizyonla harmanlıyoruz. Özel tasarım mobilya süreçlerimizi, malzeme seçimlerimizi...</p>
-                        <a href="/blog/ankara-ozel-tasarim-mobilya-siteler/" class="blog-card-link" data-translate="blog-readmore">Devamını Oku <i class="fas fa-arrow-right"></i></a>
+                        <a href="/blog/ankara-ozel-tasarim-mobilya-siteler/" class="blog-card-link" aria-label="Devamını Oku: Ankara Özel Tasarım Mobilya ve Siteler Mobilya Geleneği">Devamını Oku <span class="sr-only">: Ankara Özel Tasarım Mobilya</span> <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
 
@@ -358,7 +366,7 @@
                         </div>
                         <h3 class="blog-card-title"><a href="/blog/ankara-ozel-uretim-mutfak-dolabi/" data-translate="blog-t-2">Ankara Özel Üretim Mutfak Tasarımı & Dolap Çözümleri</a></h3>
                         <p class="blog-card-excerpt" data-translate="blog-exc-2">Mutfak dekorasyonunda estetik ve ergonominin buluşması. Kişiye özel ölçü ve lüks kaplama detaylarıyla hazırladığımız mutfak projelerimiz...</p>
-                        <a href="/blog/ankara-ozel-uretim-mutfak-dolabi/" class="blog-card-link" data-translate="blog-readmore">Devamını Oku <i class="fas fa-arrow-right"></i></a>
+                        <a href="/blog/ankara-ozel-uretim-mutfak-dolabi/" class="blog-card-link" aria-label="Devamını Oku: Ankara Özel Üretim Mutfak Tasarımı & Dolap Çözümleri">Devamını Oku <span class="sr-only">: Ankara Özel Üretim Mutfak</span> <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
 
@@ -375,7 +383,7 @@
                         </div>
                         <h3 class="blog-card-title"><a href="/blog/cayyolu-incek-umitkoy-villa-mobilya-tasarimi/" data-translate="blog-t-3">Çayyolu, İncek ve Ümitköy Bölgesi Lüks Villa Mobilya Tasarımı</a></h3>
                         <p class="blog-card-excerpt" data-translate="blog-exc-3">Çayyolu, İncek ve Ümitköy'deki villa ve lüks konut projelerimiz. Bütünsel iç mimari ahşap imalatlarımız ve anahtar teslim dekorasyon hizmetimiz...</p>
-                        <a href="/blog/cayyolu-incek-umitkoy-villa-mobilya-tasarimi/" class="blog-card-link" data-translate="blog-readmore">Devamını Oku <i class="fas fa-arrow-right"></i></a>
+                        <a href="/blog/cayyolu-incek-umitkoy-villa-mobilya-tasarimi/" class="blog-card-link" aria-label="Devamını Oku: Çayyolu, İncek ve Ümitköy Bölgesi Lüks Villa Mobilya Tasarımı">Devamını Oku <span class="sr-only">: Çayyolu İncek Villa Mobilyası</span> <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
             </div>
@@ -486,10 +494,10 @@
             
             <div class="footer-links">
                 <h4 data-translate="footer-h-links">Hızlı Erişim</h4>
-                <a href="#home" data-translate="nav-home">Ana Sayfa</a>
-                <a href="#collections" data-translate="nav-collections">Koleksiyonlar</a>
-                <a href="/blog/" data-translate="nav-blog">Blog & Rehberler</a>
-                <a href="#contact" data-translate="nav-contact">İletişim</a>
+                <a href="/" data-translate="footer-nav-home">Elizi Ana Sayfa</a>
+                <a href="#collections" data-translate="footer-nav-collections">Özel Koleksiyonlar</a>
+                <a href="/blog/" data-translate="footer-nav-blog">Blog & Rehberler</a>
+                <a href="#contact" data-translate="footer-nav-contact">Bize Ulaşın</a>
             </div>
 
             <div class="footer-hours">
@@ -548,6 +556,6 @@
     </a>
 
     <!-- Custom JavaScript -->
-    <script src="app.js?v=1.2"></script>
+    <script src="app.js?v=1.2" defer></script>
 </body>
 </html>

@@ -45,13 +45,21 @@
     }
     </script>
     
+        <!-- Resource Hints & Fast Preconnect for < 0.4s response -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     
     <!-- Favicon -->
     <link rel="shortcut icon" href="/favicon_elizi_dizayn.jpeg" type="image/jpeg">
@@ -90,7 +98,7 @@
             </a>
             
             <nav class="nav-menu" id="navMenu">
-                <a href="/#home" class="nav-link" data-translate="nav-home">Ana Sayfa</a>
+                <a href="/" class="nav-link" data-translate="nav-home">Ana Sayfa</a>
                 <a href="/#collections" class="nav-link" data-translate="nav-collections">Koleksiyonlar</a>
                 <a href="/blog/" class="nav-link active" data-translate="nav-blog">Blog</a>
                 <a href="/#contact" class="nav-link" data-translate="nav-contact">İletişim</a>
@@ -155,7 +163,7 @@
                 <article class="post-content">
 
                     <p>
-                        İç mimarlık pratiğinde vizyoner fikirler ve etkileyici 3D renderlar sürecin sadece ilk yarısıdır. Projenin başarısı, bu çizimlerin şantiyede milimetrik hassasiyetle gerçeğe dönüştürülmesine bağlıdır. Taşeron marangozların çizimleri yanlış yorumlaması, malzeme kalitesinde taviz verilmesi veya teslim tarihlerinin sarkması mimari ofislerin itibarını doğrudan zedeler.
+                        İç mimarlık pratiğinde vizyoner fikirler ve etkileyici 3D renderlar sürecin sadece ilk yarısıdır. Seçkin <strong>iç mimarlık ofislerine özel tasarım ahşap çözüm ortaklığı</strong> sunarak, projelerinizi çizimden montaja kusursuz yönetiyoruz. Projenin başarısı, bu çizimlerin şantiyede milimetrik hassasiyetle gerçeğe dönüştürülmesine bağlıdır. Taşeron marangozların çizimleri yanlış yorumlaması, malzeme kalitesinde taviz verilmesi veya teslim tarihlerinin sarkması mimari ofislerin itibarını doğrudan zedeler.
                     </p>
                     <p>
                         <strong>Elizi Dizayn</strong>, iç mimarlık ve tasarım stüdyolarının "arkasındaki güvenilir üretim gücü" olmak üzere kurgulanmış bir B2B proje ortaklığı modeli sunmaktadır.
@@ -243,12 +251,12 @@
                 </div>
             </div>
             
-            <div class="footer-links">
+                        <div class="footer-links">
                 <h4 data-translate="footer-h-links">Hızlı Erişim</h4>
-                <a href="/#home" data-translate="nav-home">Ana Sayfa</a>
-                <a href="/#collections" data-translate="nav-collections">Koleksiyonlar</a>
-                <a href="/blog/" data-translate="nav-blog">Blog & Rehberler</a>
-                <a href="/#contact" data-translate="nav-contact">İletişim</a>
+                <a href="/" data-translate="footer-nav-home">Elizi Ana Sayfa</a>
+                <a href="/#collections" data-translate="footer-nav-collections">Özel Koleksiyonlar</a>
+                <a href="/blog/" data-translate="footer-nav-blog">Blog & Rehberler</a>
+                <a href="/#contact" data-translate="footer-nav-contact">Bize Ulaşın</a>
             </div>
 
             <div class="footer-hours">
@@ -279,6 +287,6 @@
     </a>
 
     <!-- Custom JavaScript -->
-    <script src="/app.js"></script>
+    <script src="/app.js" defer></script>
 </body>
 </html>

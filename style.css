@@ -2541,3 +2541,17 @@ body.dark-theme .experience-badge .text {
         right: 20px;
     }
 }
+
+/* Screen reader only utility for accessible and unique SEO anchor text */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
