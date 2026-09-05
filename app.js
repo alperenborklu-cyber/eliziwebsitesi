@@ -315,7 +315,6 @@ document.addEventListener('DOMContentLoaded', () => {
             "blog-empty-title": "No Matching Articles Found",
             "blog-empty-desc": "No guides matched your search criteria. Try a different keyword or reset categories to browse all guides.",
             "blog-empty-btn": "Show All Articles",
-            "blog-result-count": "{count} guides displayed",
             "blog-cat-32": "International Projects",
             "blog-t-32": "Luxury Villa & Palace Bespoke Woodwork: Dubai, Qatar & Saudi Arabia",
             "blog-exc-32": "Turnkey luxury bespoke woodwork, boiserie wall paneling, and climatic timber seasoning for prestigious palaces, private villas, and penthouses across Dubai, Doha, and Riyadh.",
@@ -620,7 +619,6 @@ document.addEventListener('DOMContentLoaded', () => {
             "blog-empty-title": "Eşleşen Yazı Bulunamadı",
             "blog-empty-desc": "Aradığınız kriterlere uygun makale bulunamadı. Farklı bir anahtar kelime deneyebilir veya kategorileri sıfırlayabilirsiniz.",
             "blog-empty-btn": "Tüm Yazıları Göster",
-            "blog-result-count": "{count} rehber yazı listeleniyor",
             "blog-cat-32": "Uluslararası Projeler",
             "blog-t-32": "Dubai, Katar ve Suudi Arabistan'da Lüks Villa & Saray Özel Ahşap Mobilya İmalatı",
             "blog-exc-32": "Körfez ülkelerindeki prestijli saray, villa ve penthouse projeleri için çöl iklimine dayanıklı fırınlanmış kereste, boiserie duvar kaplamaları ve Siteler'den anahtar teslim ihracat imalatı.",
@@ -1119,7 +1117,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const chips = document.querySelectorAll('.blog-chip');
         const cards = document.querySelectorAll('.blog-card');
         const emptyState = document.getElementById('blogEmptyState');
-        const resultCountSpan = document.getElementById('blogResultCount');
         const resetBtn = document.getElementById('blogResetBtn');
 
         if (!searchInput && chips.length === 0) return;
@@ -1181,15 +1178,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     card.style.display = 'none';
                 }
             });
-
-            // Update dynamic counter & empty state
-            if (resultCountSpan) {
-                if (currentLang === 'en') {
-                    resultCountSpan.textContent = `${visibleCount} guide${visibleCount === 1 ? '' : 's'} displayed`;
-                } else {
-                    resultCountSpan.textContent = `${visibleCount} rehber yazı listeleniyor`;
-                }
-            }
 
             if (emptyState) {
                 emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
