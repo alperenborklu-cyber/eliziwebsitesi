@@ -206,4 +206,18 @@
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
+
+  <!-- GCC & Arabian Gulf International Architectural Millwork -->
+  <url>
+    <loc>https://www.elizidizaynmobilya.com/blog/luxury-villa-palace-bespoke-woodwork-dubai-qatar-saudi-arabia/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.elizidizaynmobilya.com/blog/bespoke-majlis-private-penthouse-joinery-gcc-luxury-interiors/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
 </urlset>

@@ -165,6 +165,17 @@ document.addEventListener('DOMContentLoaded', () => {
             "blog-exc-31": "Floating timber bathroom consoles, thermo-treated water-resistant ash and teak, LED illuminated niches, and integrated seamless marble vanity counters.",
             "blog-date-31": "<i class=\"far fa-calendar-alt\"></i> 31 Aug 2026",
             "blog-author-31": "<i class=\"far fa-user\"></i> Elizi Bath Studio",
+            "blog-cat-32": "International Projects",
+            "blog-t-32": "Bespoke Architectural Millwork & Luxury Woodwork for Villas and Palaces in Dubai, Qatar & Saudi Arabia",
+            "blog-exc-32": "Custom architectural millwork and luxury bespoke woodwork for royal palaces and private villas in Dubai, Doha, Riyadh, and Jeddah by Elizi Dizayn Turkey.",
+            "blog-date-32": "<i class=\"far fa-calendar-alt\"></i> 5 Sep 2026",
+            "blog-author-32": "<i class=\"far fa-user\"></i> Elizi Gulf Desk",
+            "blog-cat-33": "GCC Luxury Interiors",
+            "blog-t-33": "Custom Luxury Majlis Woodwork & Penthouse Interior Joinery: Contemporary Arabic Luxury Design",
+            "blog-exc-33": "Harmonizing cultural heritage with quiet luxury: custom modern mashrabiya wood lattices, fluted walnut consoles, and private C-suite executive suites across GCC residences.",
+            "blog-date-33": "<i class=\"far fa-calendar-alt\"></i> 5 Sep 2026",
+            "blog-author-33": "<i class=\"far fa-user\"></i> Elizi Middle East Studio",
+
 
             "footer-subbrand": "DESIGN & FURNITURE",
             "footer-desc": "Craft rising from Siteler,<br>flawless comfort in your home.",
