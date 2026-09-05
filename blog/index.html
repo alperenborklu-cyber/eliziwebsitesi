@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Elizi Dizayn & Mobilya Blogu - Ankara Siteler ahşap zanaatı, lüks villa projeleri, özel tasarım makam odaları ve uluslararası mimari ahşap mobilya rehberleri.">
+    <title>Blog & Zanaat Rehberi | Elizi Dizayn & Mobilya</title>
+    <link rel="canonical" href="https://www.elizidizaynmobilya.com/blog/">
+    
+    <!-- OpenGraph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Blog & Zanaat Rehberi | Elizi Dizayn & Mobilya">
+    <meta property="og:description" content="Kişiye özel mobilya üretimi, Ankara Siteler ahşap işçiliği, lüks iç mimari tasarımlar ve küresel mimari ahşap projeleri.">
+    <meta property="og:url" content="https://www.elizidizaynmobilya.com/blog/">
+    <meta property="og:image" content="https://www.elizidizaynmobilya.com/assets/elizi-luks-mobilya-mimari-ahsap-projeleri.webp">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/favicon_elizi_dizayn.jpeg" type="image/jpeg">
+    
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body style="background-color: var(--bg-secondary);">
+    <script>
+        if (localStorage.getItem('eliziTheme') === 'dark') {
+            document.body.classList.add('dark-theme');
+        }
+    </script>
+
+    <!-- Preloader Overlay -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <div class="fingerprint-wrapper">
+                <i class="fa-solid fa-fingerprint fingerprint-bg"></i>
+                <div class="fingerprint-active-wrap">
+                    <i class="fa-solid fa-fingerprint fingerprint-active"></i>
+                </div>
+                <div class="scan-line"></div>
+            </div>
+            <div class="preloader-brand">ELİZİ</div>
+            <div class="preloader-subtitle" data-translate="preloader-subtitle">Zanaatın Benzersiz İzi</div>
+        </div>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header class="header scrolled">
+        <div class="container header-container">
+            <a href="/" class="logo-container">
+                <img src="/elizi-dizayn-mobilya-logo-removebg-preview.png" alt="Elizi Dizayn & Mobilya Logo" class="site-logo">
+                <span class="brand-text">ELİZİ <span class="sub-brand" data-translate="header-subbrand">DİZAYN</span></span>
+            </a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <a href="/#home" class="nav-link" data-translate="nav-home">Ana Sayfa</a>
+                <a href="/#collections" class="nav-link" data-translate="nav-collections">Koleksiyonlar</a>
+                <a href="/blog/" class="nav-link active" data-translate="nav-blog">Blog</a>
+                <a href="/#contact" class="nav-link" data-translate="nav-contact">İletişim</a>
+            </nav>
+
+            <div class="header-actions">
+                <button id="themeToggle" class="btn-theme-toggle" aria-label="Toggle Theme">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="theme-icon sun-icon">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="theme-icon moon-icon">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <button id="langToggle" class="btn-lang-toggle" aria-label="Toggle Language">EN</button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menüyü Aç">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blog Header Banner -->
+    <section class="post-layout" style="padding-top: 150px; padding-bottom: 50px; text-align: center;">
+        <div class="container">
+            <span class="post-tag" data-translate="blog-page-tag">Elizi Mobilya Rehberi & International Insights</span>
+            <h1 class="post-title" style="font-size: 3.5rem; margin-bottom: 15px;" data-translate="blog-page-title">Fikirler & Tasarım İpuçları</h1>
+            <p style="max-width: 760px; margin: 0 auto; color: var(--text-secondary); font-weight: 300; font-size: 1.1rem; line-height: 1.7;" data-translate="blog-page-desc">
+                Ankara Siteler'den dünyaya uzanan lüks ahşap zanaatı. Kişiye özel mobilya üretimi, mimari ahşap kaplamalar, lüks villa projeleri ve uluslararası architectural millwork rehberleri.
+            </p>
+        </div>
+    </section>
+
+    <!-- Blog Grid Content -->
+    <section style="padding-bottom: 100px;">
+        <div class="container">
+            <div class="blog-grid">
+                
+                <!-- ================= Turkish Local Articles ================= -->
+                
+                <!-- Blog Card 1 -->
+                <article class="blog-card">
+                    <div class="blog-card-img-wrapper">
+                        <span class="blog-category-badge" data-translate="blog-cat-1">Özel Tasarım</span>
+                        <img src="/assets/elizi-luks-mobilya-mimari-ahsap-projeleri.webp" alt="Ankara Özel Tasarım Mobilya Siteler" class="blog-card-img">
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span><i class="far fa-calendar-alt"></i> 11 Ağustos 2026</span>
+                            <span data-translate="blog-author-1"><i class="far fa-user"></i> Elizi Zanaat</span>
+                        </div>
+                        <h3 class="blog-card-title"><a href="/blog/ankara-ozel-tasarim-mobilya-siteler/" data-translate="blog-t-1">Ankara Özel Tasarım Mobilya ve Siteler Mobilya Geleneği</a></h3>
+                        <p class="blog-card-excerpt" data-translate="blog-exc-1-full">Ankara Siteler'in köklü ahşap işçiliği kültürünü modern mimari vizyonla harmanlıyoruz. Özel tasarım mobilya süreçlerimizi, malzeme seçimlerimizi ve yaşam alanlarına değer katan detayları keşfedin.</p>
+                        <a href="/blog/ankara-ozel-tasarim-mobilya-siteler/" class="blog-card-link" data-translate="blog-readmore">Devamını Oku <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 2 -->
+                <article class="blog-card">
+                    <div class="blog-card-img-wrapper">
+                        <span class="blog-category-badge" data-translate="blog-cat-2">Mutfak Projeleri</span>
+                        <img src="/assets/elizi-ozel-tasarim-masif-ahsap-yemek-masasi.webp" alt="Ankara Özel Üretim Mutfak Dolabı" class="blog-card-img">
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span><i class="far fa-calendar-alt"></i> 10 Ağustos 2026</span>
+                            <span data-translate="blog-author-2"><i class="far fa-user"></i> Elizi Mimarlık</span>
+                        </div>
+                        <h3 class="blog-card-title"><a href="/blog/ankara-ozel-uretim-mutfak-dolabi/" data-translate="blog-t-2">Ankara Özel Üretim Mutfak Tasarımı & Dolap Çözümleri</a></h3>
+                        <p class="blog-card-excerpt" data-translate="blog-exc-2-full">Mutfak dekorasyonunda estetik ve ergonominin kusursuz buluşması. Kişiye özel ölçü ve lüks kaplama detaylarıyla hazırladığımız, Ankara'da fark yaratan özel üretim mutfak projelerimiz.</p>
+                        <a href="/blog/ankara-ozel-uretim-mutfak-dolabi/" class="blog-card-link" data-translate="blog-readmore">Devamını Oku <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 3 -->
+                <article class="blog-card">
+                    <div class="blog-card-img-wrapper">
+                        <span class="blog-category-badge" data-translate="blog-cat-3">Villa Projeleri</span>
+                        <img src="/assets/elizi-ozel-uretim-ahsap-gardrop-giyinme-odasi.webp" alt="Çayyolu İncek Ümitköy Özel Mobilya" class="blog-card-img">
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span><i class="far fa-calendar-alt"></i> 9 Ağustos 2026</span>
+                            <span data-translate="blog-author-3"><i class="far fa-user"></i> İç Mimari</span>
+                        </div>
+                        <h3 class="blog-card-title"><a href="/blog/cayyolu-incek-umitkoy-villa-mobilya-tasarimi/" data-translate="blog-t-3">Çayyolu, İncek ve Ümitköy Bölgesi Lüks Villa Mobilya Tasarımı</a></h3>
+                        <p class="blog-card-excerpt" data-translate="blog-exc-3-full">Çayyolu, İncek ve Ümitköy'deki lüks villa konut projelerimiz. Bütünsel iç mimari ahşap imalatlarımız, anahtar teslim dekorasyon hizmetlerimiz ve üst düzey zanaatkarlık.</p>
+                        <a href="/blog/cayyolu-incek-umitkoy-villa-mobilya-tasarimi/" class="blog-card-link" data-translate="blog-readmore">Devamını Oku <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 4 -->
+                <article class="blog-card">
+                    <div class="blog-card-img-wrapper">
+                        <span class="blog-category-badge" data-translate="blog-cat-4">Dolap Tasarımı</span>
+                        <img src="/assets/elizi-ozel-uretim-ahsap-gardrop-giyinme-odasi.webp" alt="Ankara Gömme Dolap Giyinme Odası" class="blog-card-img">
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span><i class="far fa-calendar-alt"></i> 7 Ağustos 2026</span>
+                            <span data-translate="blog-author-4"><i class="far fa-user"></i> Elizi Dizayn</span>
+                        </div>
+                        <h3 class="blog-card-title"><a href="/blog/ankara-gomme-dolap-giyinme-odasi/" data-translate="blog-t-4">Ankara Gömme Dolap ve Giyinme Odası Tasarım Rehberi</a></h3>
+                        <p class="blog-card-excerpt" data-translate="blog-exc-4-full">Yaşam alanlarında maksimum depolama ve lüks tasarımı bir arada sunan gömme dolap ile modern giyinme odası projelerimiz. Ankara Siteler işçiliği kalitesiyle.</p>
+                        <a href="/blog/ankara-gomme-dolap-giyinme-odasi/" class="blog-card-link" data-translate="blog-readmore">Devamını Oku <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 5 -->
+                <article class="blog-card">
+                    <div class="blog-card-img-wrapper">
+                        <span class="blog-category-badge" data-translate="blog-cat-5">TV Üniteleri</span>
+                        <img src="/assets/elizi-siteler-ahsap-isciligi-zanaat-atolye.webp" alt="Ankara TV Ünitesi" class="blog-card-img">
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span><i class="far fa-calendar-alt"></i> 5 Ağustos 2026</span>
+                            <span data-translate="blog-author-5"><i class="far fa-user"></i> Mobilya Tasarım</span>
+                        </div>
+                        <h3 class="blog-card-title"><a href="/blog/ankara-modern-tv-unitesi-modelleri/" data-translate="blog-t-5">Ankara Modern TV Ünitesi Modelleri: Ahşap ve Lüks Detaylar</a></h3>
+                        <p class="blog-card-excerpt" data-translate="blog-exc-5-full">Salonda odak noktası oluşturacak modern ve klasik ahşap TV ünitesi modelleri. Mekana özel ölçüler, şık LED aydınlatmalar ve birinci sınıf doğal kaplamalar.</p>
+                        <a href="/blog/ankara-modern-tv-unitesi-modelleri/" class="blog-card-link" data-translate="blog-readmore">Devamını Oku <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 6 -->
+                <article class="blog-card">
+                    <div class="blog-card-img-wrapper">
+                        <span class="blog-category-badge" data-translate="blog-cat-6">Duvar Panelleri</span>
+                        <img src="/assets/elizi-heykelsi-luks-makam-masasi-akustik-duvar.webp" alt="Ankara Ahşap Duvar Paneli" class="blog-card-img">
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span><i class="far fa-calendar-alt"></i> 3 Ağustos 2026</span>
+                            <span data-translate="blog-author-6"><i class="far fa-user"></i> Duvar Dekorasyonu</span>
+                        </div>
+                        <h3 class="blog-card-title"><a href="/blog/ankara-ahsap-duvar-paneli-modelleri/" data-translate="blog-t-6">Ankara Ahşap Duvar Paneli Modelleri ile Duvar Dekorasyonu</a></h3>
+                        <p class="blog-card-excerpt" data-translate="blog-exc-6-full">Doğallığın ve zarafetin duvarlarınıza yansıması. Ankara'da ahşap duvar paneli uygulamalarımız, akustik ahşap paneller ve modern mimari tasarımlar.</p>
+                        <a href="/blog/ankara-ahsap-duvar-paneli-modelleri/" class="blog-card-link" data-translate="blog-readmore">Devamını Oku <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- ================= International SEO English Articles ================= -->
+
+                <!-- Blog Card 7 (Intl 1) -->
+                <article class="blog-card">
+                    <div class="blog-card-img-wrapper">
+                        <span class="blog-category-badge">Bespoke Millwork</span>
+                        <img src="/assets/elizi-luks-mobilya-mimari-ahsap-projeleri.webp" alt="Luxury Bespoke Furniture Turkey" class="blog-card-img">
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span><i class="far fa-calendar-alt"></i> 04 Sep 2026</span>
+                            <span><i class="far fa-user"></i> Elizi Architectural Desk</span>
+                        </div>
+                        <h3 class="blog-card-title"><a href="/blog/luxury-bespoke-furniture-turkey-architectural-millwork/">Luxury Bespoke Furniture Manufacturing in Turkey: Architectural Millwork for Global Projects</a></h3>
+                        <p class="blog-card-excerpt">Discover how Elizi Dizayn delivers turnkey luxury bespoke furniture and architectural millwork from Turkey to prestigious residential and commercial projects worldwide.</p>
+                        <a href="/blog/luxury-bespoke-furniture-turkey-architectural-millwork/" class="blog-card-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 8 (Intl 2) -->
+                <article class="blog-card">
+                    <div class="blog-card-img-wrapper">
+                        <span class="blog-category-badge">Executive Suites</span>
+                        <img src="/assets/elizi-heykelsi-luks-makam-masasi-akustik-duvar.webp" alt="Handcrafted Executive Office Desks" class="blog-card-img">
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span><i class="far fa-calendar-alt"></i> 03 Sep 2026</span>
+                            <span><i class="far fa-user"></i> Elizi Executive Studio</span>
+                        </div>
+                        <h3 class="blog-card-title"><a href="/blog/custom-executive-office-desks-luxury-boardroom-furniture/">Handcrafted Executive Office Desks & Luxury Boardroom Furniture for Global Headquarters</a></h3>
+                        <p class="blog-card-excerpt">Sculptural executive desks and monumental boardroom tables handcrafted from solid walnut, marble, and brushed brass for corporate leaders worldwide.</p>
+                        <a href="/blog/custom-executive-office-desks-luxury-boardroom-furniture/" class="blog-card-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 9 (Intl 3) -->
+                <article class="blog-card">
+                    <div class="blog-card-img-wrapper">
+                        <span class="blog-category-badge">Wall Cladding</span>
+                        <img src="/assets/elizi-modern-karsilama-bankosu-ahsap-panelleme.webp" alt="Architectural Wooden Wall Cladding" class="blog-card-img">
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span><i class="far fa-calendar-alt"></i> 02 Sep 2026</span>
+                            <span><i class="far fa-user"></i> Elizi Architectural Desk</span>
+                        </div>
+                        <h3 class="blog-card-title"><a href="/blog/bespoke-wooden-wall-cladding-acoustic-panels-luxury-interiors/">Architectural Wooden Wall Cladding & Fluted Acoustic Paneling: Modern Luxury Trends</a></h3>
+                        <p class="blog-card-excerpt">A comprehensive guide to bespoke wooden wall cladding, fluted architectural panels, concealed pivot doors, and integrated LED timber paneling.</p>
+                        <a href="/blog/bespoke-wooden-wall-cladding-acoustic-panels-luxury-interiors/" class="blog-card-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 10 (Intl 4) -->
+                <article class="blog-card">
+                    <div class="blog-card-img-wrapper">
+                        <span class="blog-category-badge">Villa Projects</span>
+                        <img src="/assets/elizi-ozel-uretim-ahsap-gardrop-giyinme-odasi.webp" alt="Luxury Villa Joinery Dubai London" class="blog-card-img">
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span><i class="far fa-calendar-alt"></i> 01 Sep 2026</span>
+                            <span><i class="far fa-user"></i> Elizi Export Division</span>
+                        </div>
+                        <h3 class="blog-card-title"><a href="/blog/luxury-villa-interior-woodwork-dubai-london/">Turnkey Architectural Millwork & Custom Joinery for Luxury Villas in Dubai and London</a></h3>
+                        <p class="blog-card-excerpt">Discover turnkey interior woodwork for luxury villas and penthouses in Dubai, London, and Europe. Custom joinery, walk-in closets, and architectural paneling.</p>
+                        <a href="/blog/luxury-villa-interior-woodwork-dubai-london/" class="blog-card-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 11 (Intl 5) -->
+                <article class="blog-card">
+                    <div class="blog-card-img-wrapper">
+                        <span class="blog-category-badge">Dining Collections</span>
+                        <img src="/assets/elizi-ozel-tasarim-masif-ahsap-yemek-masasi.webp" alt="Solid Oak and Walnut Dining Tables" class="blog-card-img">
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span><i class="far fa-calendar-alt"></i> 30 Aug 2026</span>
+                            <span><i class="far fa-user"></i> Elizi Master Craftsmen</span>
+                        </div>
+                        <h3 class="blog-card-title"><a href="/blog/handcrafted-solid-oak-walnut-dining-tables-bespoke/">Master-Crafted Solid Oak & Walnut Dining Tables: Artisanal Turkish Woodworking</a></h3>
+                        <p class="blog-card-excerpt">Explore bespoke solid walnut and oak dining tables by Elizi Dizayn. Handcrafted natural live-edge and geometric tables designed for luxury dining spaces.</p>
+                        <a href="/blog/handcrafted-solid-oak-walnut-dining-tables-bespoke/" class="blog-card-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 12 (Intl 6) -->
+                <article class="blog-card">
+                    <div class="blog-card-img-wrapper">
+                        <span class="blog-category-badge">Wardrobes & Closets</span>
+                        <img src="/assets/elizi-ozel-uretim-ahsap-gardrop-giyinme-odasi.webp" alt="Bespoke Walk-in Closets" class="blog-card-img">
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span><i class="far fa-calendar-alt"></i> 28 Aug 2026</span>
+                            <span><i class="far fa-user"></i> Elizi Interior Architecture</span>
+                        </div>
+                        <h3 class="blog-card-title"><a href="/blog/custom-walk-in-closets-luxury-dressing-rooms/">Bespoke Walk-in Closets & Luxury Dressing Room Systems for Prestigious Residences</a></h3>
+                        <p class="blog-card-excerpt">Design bespoke walk-in closets and dressing rooms with Elizi Dizayn. Smoked glass, Italian hardware, leather-wrapped drawers, and custom timber cabinetry.</p>
+                        <a href="/blog/custom-walk-in-closets-luxury-dressing-rooms/" class="blog-card-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 13 (Intl 7) -->
+                <article class="blog-card">
+                    <div class="blog-card-img-wrapper">
+                        <span class="blog-category-badge">Commercial Spaces</span>
+                        <img src="/assets/elizi-modern-karsilama-bankosu-ahsap-panelleme.webp" alt="Contemporary Reception Desks" class="blog-card-img">
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span><i class="far fa-calendar-alt"></i> 26 Aug 2026</span>
+                            <span><i class="far fa-user"></i> Elizi Commercial Studio</span>
+                        </div>
+                        <h3 class="blog-card-title"><a href="/blog/contemporary-reception-desks-corporate-lobby-woodwork/">Contemporary Reception Desks & Architectural Lobby Millwork for Corporate Buildings</a></h3>
+                        <p class="blog-card-excerpt">Custom reception desks and welcoming lobby architecture by Elizi Dizayn. Handcrafted oak, integrated LEDs, and stone combinations for premier commercial spaces.</p>
+                        <a href="/blog/contemporary-reception-desks-corporate-lobby-woodwork/" class="blog-card-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 14 (Intl 8) -->
+                <article class="blog-card">
+                    <div class="blog-card-img-wrapper">
+                        <span class="blog-category-badge">Bathroom Vanities</span>
+                        <img src="/assets/elizi-luks-ahsap-banyo-dolabi-lavabo-konsolu.webp" alt="Moisture Resistant Wood Vanities" class="blog-card-img">
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span><i class="far fa-calendar-alt"></i> 24 Aug 2026</span>
+                            <span><i class="far fa-user"></i> Elizi Bespoke Bath</span>
+                        </div>
+                        <h3 class="blog-card-title"><a href="/blog/luxury-bathroom-vanities-moisture-resistant-wood/">Custom Moisture-Resistant Wood Bathroom Vanities & Floating Credenzas</a></h3>
+                        <p class="blog-card-excerpt">Discover bespoke moisture-resistant wood bathroom vanities by Elizi Dizayn. Fluted teak, oak, natural marble countertops, and integrated LED backlit mirrors.</p>
+                        <a href="/blog/luxury-bathroom-vanities-moisture-resistant-wood/" class="blog-card-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 15 (Intl 9) -->
+                <article class="blog-card">
+                    <div class="blog-card-img-wrapper">
+                        <span class="blog-category-badge">Industry Insights</span>
+                        <img src="/assets/elizi-siteler-ahsap-isciligi-zanaat-atolye.webp" alt="Why Source Furniture from Turkey" class="blog-card-img">
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span><i class="far fa-calendar-alt"></i> 22 Aug 2026</span>
+                            <span><i class="far fa-user"></i> Alperen Börklü</span>
+                        </div>
+                        <h3 class="blog-card-title"><a href="/blog/why-interior-designers-source-bespoke-furniture-turkey/">Why Global Interior Designers & Architects Source Bespoke Millwork from Turkey</a></h3>
+                        <p class="blog-card-excerpt">Learn why leading interior design studios in the UK, UAE, and Europe partner with Turkish custom furniture manufacturers like Elizi Dizayn for high-end projects.</p>
+                        <a href="/blog/why-interior-designers-source-bespoke-furniture-turkey/" class="blog-card-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 16 (Intl 10) -->
+                <article class="blog-card">
+                    <div class="blog-card-img-wrapper">
+                        <span class="blog-category-badge">Materials Guide</span>
+                        <img src="/assets/elizi-modern-acik-ofis-ahsap-seperator-tavan.webp" alt="Premium Hardwood Guide" class="blog-card-img">
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span><i class="far fa-calendar-alt"></i> 20 Aug 2026</span>
+                            <span><i class="far fa-user"></i> Elizi Woodworking Atelier</span>
+                        </div>
+                        <h3 class="blog-card-title"><a href="/blog/sustainable-hardwood-craftsmanship-custom-millwork-guide/">Premium Hardwood Guide for Bespoke Millwork: Walnut, Oak, and Natural Architectural Veneers</a></h3>
+                        <p class="blog-card-excerpt">An architectural guide to selecting premium hardwoods for bespoke furniture and millwork: American Walnut, European Oak, and exotic natural timber veneers.</p>
+                        <a href="/blog/sustainable-hardwood-craftsmanship-custom-millwork-guide/" class="blog-card-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="/" class="logo-container">
+                    <img src="/elizi-dizayn-mobilya-logo-removebg-preview.png" alt="Elizi Dizayn & Mobilya Logo" class="site-logo">
+                    <span class="brand-text">ELİZİ <span class="sub-brand" data-translate="footer-subbrand">DİZAYN & MOBİLYA</span></span>
+                </a>
+                <p data-translate="footer-desc">Siteler'den yükselen zanaat,<br>evinizdeki kusursuz konfor.</p>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/elizidizayn.mobilya/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4 data-translate="footer-h-links">Hızlı Erişim</h4>
+                <a href="/#home" data-translate="nav-home">Ana Sayfa</a>
+                <a href="/#collections" data-translate="nav-collections">Koleksiyonlar</a>
+                <a href="/blog/" data-translate="nav-blog">Blog & Rehberler</a>
+                <a href="/#contact" data-translate="nav-contact">İletişim</a>
+            </div>
+
+            <div class="footer-hours">
+                <h4 data-translate="footer-h-hours">Çalışma Saatleri</h4>
+                <p data-translate="footer-hours-1">Pazartesi - Cumartesi: 08:30 - 18:30</p>
+                <p data-translate="footer-hours-2">Pazar: Kapalı</p>
+                <p class="footer-address">
+                    <a href="https://maps.google.com/?q=%C3%96nder,+Serince+Sk.+6/b,+06360+Alt%C4%B1nda%C4%9F/Ankara" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Önder, Serince Sk. 6/b, 06360 Altındağ/Ankara</span>
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-translate="footer-copy">&copy; 2026 Elizi Dizayn & Mobilya. Tüm Hakları Saklıdır. Designed by <a href="https://alperenborklu.com" target="_blank">Alperen Börklü</a></p>
+        </div>
+    </footer>
+
+    <!-- Floating Contact Button -->
+    <a href="/#contact" class="floating-cta" data-translate="floating-cta">
+        <i class="fa-regular fa-comment-dots"></i>
+        <span>Proje & Fiyat Talebi</span>
+    </a>
+
+    <!-- Floating Phone Button -->
+    <a href="tel:+905368946008" class="floating-phone" aria-label="Hemen Arayın: +90 536 894 60 08">
+        <i class="fa-solid fa-phone"></i>
+    </a>
+
+    <!-- Custom Script -->
+    <script src="/app.js"></script>
+</body>
+</html>
