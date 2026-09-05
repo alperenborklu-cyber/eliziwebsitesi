@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <!-- Core Site Pages -->
   <url>
     <loc>https://www.elizidizaynmobilya.com/</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.elizidizaynmobilya.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.elizidizaynmobilya.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.elizidizaynmobilya.com/"/>
     <lastmod>2026-09-05</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.elizidizaynmobilya.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.elizidizaynmobilya.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.elizidizaynmobilya.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.elizidizaynmobilya.com/"/>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>

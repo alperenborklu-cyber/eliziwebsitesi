@@ -304,7 +304,28 @@ document.addEventListener('DOMContentLoaded', () => {
             "blog-t-21": "Hardwood & Natural Veneer Selection Guide for Interior Architects: Siteler Craftsmanship Insight",
             "blog-exc-21": "An architectural guide to selecting American Walnut, rift-cut European Oak, smoked veneers, brass inlays, and kiln-dried solid hardwoods for prestigious interior designs.",
             "blog-date-21": "<i class=\"far fa-calendar-alt\"></i> September 3, 2026",
-            "blog-author-21": "<i class=\"far fa-user\"></i> Elizi Materials Studio"
+            "blog-author-21": "<i class=\"far fa-user\"></i> Elizi Materials Studio",
+            "blog-search-placeholder": "Search articles, guides (e.g. villa, kitchen, executive, Siteler, Dubai)...",
+            "blog-chip-all": "All",
+            "blog-chip-villa": "Villas & Living",
+            "blog-chip-kitchen": "Kitchen & Bath",
+            "blog-chip-office": "Office & Executive",
+            "blog-chip-craft": "Millwork & Craft",
+            "blog-chip-gcc": "International / GCC",
+            "blog-empty-title": "No Matching Articles Found",
+            "blog-empty-desc": "No guides matched your search criteria. Try a different keyword or reset categories to browse all guides.",
+            "blog-empty-btn": "Show All Articles",
+            "blog-result-count": "{count} guides displayed",
+            "blog-cat-32": "International Projects",
+            "blog-t-32": "Luxury Villa & Palace Bespoke Woodwork: Dubai, Qatar & Saudi Arabia",
+            "blog-exc-32": "Turnkey luxury bespoke woodwork, boiserie wall paneling, and climatic timber seasoning for prestigious palaces, private villas, and penthouses across Dubai, Doha, and Riyadh.",
+            "blog-date-32": "<i class=\"far fa-calendar-alt\"></i> September 5, 2026",
+            "blog-author-32": "<i class=\"far fa-user\"></i> Gulf Projects Division",
+            "blog-cat-33": "Gulf Luxury Design",
+            "blog-t-33": "Bespoke Majlis & Private Penthouse Joinery: GCC Luxury Interiors",
+            "blog-exc-33": "Contemporary Arabic luxury meets quiet luxury: custom geometric wooden mashrabiya screens, dark walnut floating consoles, backlit onyx accents, and prestigious C-suite penthouses.",
+            "blog-date-33": "<i class=\"far fa-calendar-alt\"></i> September 5, 2026",
+            "blog-author-33": "<i class=\"far fa-user\"></i> Middle East Studio"
         },
         tr: {
             "header-subbrand": "DİZAYN",
@@ -588,7 +609,28 @@ document.addEventListener('DOMContentLoaded', () => {
             "blog-t-21": "İç Mimarlar İçin Ahşap Malzeme ve Doğal Kaplama Seçim Rehberi: Siteler Uzmanlığı",
             "blog-exc-21": "İç mimarların projelerinde fark yaratan Amerikan ceviz, freze meşe, tütsülü okaliptüs kaplamalar, pirinç ve mermer birleşim detayları ile fırınlanmış masif ahşap seçim ipuçları.",
             "blog-date-21": "<i class=\"far fa-calendar-alt\"></i> 3 Eylül 2026",
-            "blog-author-21": "<i class=\"far fa-user\"></i> Elizi Malzeme Laboratuvarı"
+            "blog-author-21": "<i class=\"far fa-user\"></i> Elizi Malzeme Laboratuvarı",
+            "blog-search-placeholder": "Blogda ve rehberlerde arayın (Örn: villa, mutfak, makam, Siteler, Dubai)...",
+            "blog-chip-all": "Tümü",
+            "blog-chip-villa": "Villa & Konut",
+            "blog-chip-kitchen": "Mutfak & Banyo",
+            "blog-chip-office": "Ofis & Makam",
+            "blog-chip-craft": "İç Mimarlık & Zanaat",
+            "blog-chip-gcc": "Uluslararası / GCC",
+            "blog-empty-title": "Eşleşen Yazı Bulunamadı",
+            "blog-empty-desc": "Aradığınız kriterlere uygun makale bulunamadı. Farklı bir anahtar kelime deneyebilir veya kategorileri sıfırlayabilirsiniz.",
+            "blog-empty-btn": "Tüm Yazıları Göster",
+            "blog-result-count": "{count} rehber yazı listeleniyor",
+            "blog-cat-32": "Uluslararası Projeler",
+            "blog-t-32": "Dubai, Katar ve Suudi Arabistan'da Lüks Villa & Saray Özel Ahşap Mobilya İmalatı",
+            "blog-exc-32": "Körfez ülkelerindeki prestijli saray, villa ve penthouse projeleri için çöl iklimine dayanıklı fırınlanmış kereste, boiserie duvar kaplamaları ve Siteler'den anahtar teslim ihracat imalatı.",
+            "blog-date-32": "<i class=\"far fa-calendar-alt\"></i> 5 Eylül 2026",
+            "blog-author-32": "<i class=\"far fa-user\"></i> Elizi Körfez Masası",
+            "blog-cat-33": "Körfez Lüks Tasarım",
+            "blog-t-33": "Körfez Lüks Konutları İçin Özel Meclis (Majlis) Ahşap İşçiliği ve Penthouse Tasarımı",
+            "blog-exc-33": "Modern Arap lüks mimarisini quiet luxury çizgisiyle buluşturan özel geometrik ahşap maşrabiye paneller, koyu ceviz yüzen konsollar, arkadan aydınlatmalı oniks ve prestijli çalışma süitleri.",
+            "blog-date-33": "<i class=\"far fa-calendar-alt\"></i> 5 Eylül 2026",
+            "blog-author-33": "<i class=\"far fa-user\"></i> Elizi Orta Doğu Stüdyosu"
         }
     };
 
@@ -667,18 +709,41 @@ document.addEventListener('DOMContentLoaded', () => {
             if (descInput) descInput.placeholder = "İstediğiniz mobilyayı (masa, konsol, gardırop vb.), ölçüleri, malzeme detaylarını ve renk tercihlerini belirtin...";
             if (newsletterInput) newsletterInput.placeholder = "E-posta adresinizi yazın...";
         }
+        const blogSearchInput = document.getElementById('blogSearchInput');
+        if (blogSearchInput) {
+            blogSearchInput.placeholder = lang === 'en'
+                ? "Search articles, guides (e.g. villa, kitchen, executive, Siteler, Dubai)..."
+                : "Blogda ve rehberlerde arayın (Örn: villa, mutfak, makam, Siteler, Dubai)...";
+        }
     }
 
     if (langToggle) {
         langToggle.addEventListener('click', () => {
+            const path = window.location.pathname.toLowerCase();
+            const isEnRoot = path === '/en/' || path === '/en' || path.endsWith('/en/index.html');
+            const isTrRoot = path === '/' || path === '/index.html' || path === '';
+
+            if (isTrRoot) {
+                localStorage.setItem('eliziLang', 'en');
+                window.location.href = '/en/';
+                return;
+            }
+            if (isEnRoot) {
+                localStorage.setItem('eliziLang', 'tr');
+                window.location.href = '/';
+                return;
+            }
+
             const currentLang = localStorage.getItem('eliziLang') || 'tr';
             const newLang = currentLang === 'tr' ? 'en' : 'tr';
             setLanguage(newLang);
         });
     }
 
-    // Initialize Language
-    const initialLang = localStorage.getItem('eliziLang') || 'tr';
+    // Initialize Language (Default to 'en' on /en/ root, otherwise localStorage or 'tr')
+    const currentPath = window.location.pathname.toLowerCase();
+    const isEnPage = currentPath === '/en/' || currentPath === '/en' || currentPath.endsWith('/en/index.html');
+    const initialLang = isEnPage ? 'en' : (localStorage.getItem('eliziLang') || 'tr');
     setLanguage(initialLang);
 
     // --- Header Scroll State ---
@@ -1045,6 +1110,147 @@ document.addEventListener('DOMContentLoaded', () => {
 
         startReviewInterval();
     }
+
+
+    // --- Blog Live Search & Category Filtering ---
+    function initBlogFilters() {
+        const searchInput = document.getElementById('blogSearchInput');
+        const searchClear = document.getElementById('blogSearchClear');
+        const chips = document.querySelectorAll('.blog-chip');
+        const cards = document.querySelectorAll('.blog-card');
+        const emptyState = document.getElementById('blogEmptyState');
+        const resultCountSpan = document.getElementById('blogResultCount');
+        const resetBtn = document.getElementById('blogResetBtn');
+
+        if (!searchInput && chips.length === 0) return;
+
+        let activeCategory = 'all';
+        let searchQuery = '';
+
+        // Calculate card counts for each category chip
+        function updateChipCounts() {
+            const counts = {
+                all: cards.length,
+                villa: 0,
+                'mutfak-banyo': 0,
+                'ofis-makam': 0,
+                'ic-mimarlik-zanaat': 0,
+                'international-gcc': 0
+            };
+
+            cards.forEach(card => {
+                const cats = (card.getAttribute('data-category') || '').split(' ');
+                cats.forEach(c => {
+                    if (counts[c] !== undefined) counts[c]++;
+                });
+            });
+
+            chips.forEach(chip => {
+                const cat = chip.getAttribute('data-category');
+                const countSpan = chip.querySelector('.chip-count');
+                if (countSpan && counts[cat] !== undefined) {
+                    countSpan.textContent = `(${counts[cat]})`;
+                }
+            });
+        }
+        updateChipCounts();
+
+        function filterCards() {
+            let visibleCount = 0;
+            const currentLang = localStorage.getItem('eliziLang') || 'tr';
+            const query = searchQuery.trim().toLowerCase();
+
+            cards.forEach(card => {
+                const cardCats = (card.getAttribute('data-category') || '').split(' ');
+                const title = (card.querySelector('.blog-card-title')?.textContent || '').toLowerCase();
+                const excerpt = (card.querySelector('.blog-card-excerpt')?.textContent || '').toLowerCase();
+                const badge = (card.querySelector('.blog-category-badge')?.textContent || '').toLowerCase();
+                const slug = (card.getAttribute('data-slug') || '').toLowerCase();
+
+                const matchesCategory = (activeCategory === 'all') || cardCats.includes(activeCategory);
+                const matchesSearch = !query || 
+                                      title.includes(query) || 
+                                      excerpt.includes(query) || 
+                                      badge.includes(query) ||
+                                      slug.includes(query);
+
+                if (matchesCategory && matchesSearch) {
+                    card.style.display = 'flex';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Update dynamic counter & empty state
+            if (resultCountSpan) {
+                if (currentLang === 'en') {
+                    resultCountSpan.textContent = `${visibleCount} guide${visibleCount === 1 ? '' : 's'} displayed`;
+                } else {
+                    resultCountSpan.textContent = `${visibleCount} rehber yazı listeleniyor`;
+                }
+            }
+
+            if (emptyState) {
+                emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
+            }
+        }
+
+        // Search Input Event
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                searchQuery = e.target.value;
+                if (searchClear) {
+                    searchClear.style.display = searchQuery ? 'flex' : 'none';
+                }
+                filterCards();
+            });
+        }
+
+        // Search Clear Button Event
+        if (searchClear) {
+            searchClear.addEventListener('click', () => {
+                if (searchInput) {
+                    searchInput.value = '';
+                    searchInput.focus();
+                }
+                searchQuery = '';
+                searchClear.style.display = 'none';
+                filterCards();
+            });
+        }
+
+        // Category Chips Click Event
+        chips.forEach(chip => {
+            chip.addEventListener('click', () => {
+                chips.forEach(c => c.classList.remove('active'));
+                chip.classList.add('active');
+                activeCategory = chip.getAttribute('data-category') || 'all';
+                filterCards();
+            });
+        });
+
+        // Reset Button Event in Empty State
+        if (resetBtn) {
+            resetBtn.addEventListener('click', () => {
+                if (searchInput) {
+                    searchInput.value = '';
+                    if (searchClear) searchClear.style.display = 'none';
+                }
+                searchQuery = '';
+                activeCategory = 'all';
+                chips.forEach(c => {
+                    if (c.getAttribute('data-category') === 'all') {
+                        c.classList.add('active');
+                    } else {
+                        c.classList.remove('active');
+                    }
+                });
+                filterCards();
+            });
+        }
+    }
+    initBlogFilters();
 
     // --- Preloader Dismiss ---
     const preloaderStartTime = Date.now();
