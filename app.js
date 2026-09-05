@@ -127,7 +127,80 @@ document.addEventListener('DOMContentLoaded', () => {
             "blog-cat-5": "TV Units",
             "blog-author-5": "<i class=\"far fa-user\"></i> Furniture Design",
             "blog-cat-6": "Wall Cladding",
-            "blog-author-6": "<i class=\"far fa-user\"></i> Wall Decor"
+            "blog-author-6": "<i class=\"far fa-user\"></i> Wall Decor",
+            "blog-t-4": "Ankara Built-in Wardrobe & Luxury Dressing Room Guide",
+            "blog-t-5": "Modern Wooden TV Unit Models: Luxury Timber Details",
+            "blog-t-6": "Wooden Wall Paneling Models & Contemporary Wall Decor",
+            "blog-date-1": "<i class=\"far fa-calendar-alt\"></i> August 11, 2026",
+            "blog-date-2": "<i class=\"far fa-calendar-alt\"></i> August 10, 2026",
+            "blog-date-3": "<i class=\"far fa-calendar-alt\"></i> August 9, 2026",
+            "blog-date-4": "<i class=\"far fa-calendar-alt\"></i> August 7, 2026",
+            "blog-date-5": "<i class=\"far fa-calendar-alt\"></i> August 5, 2026",
+            "blog-date-6": "<i class=\"far fa-calendar-alt\"></i> August 3, 2026",
+            "blog-date-7": "<i class=\"far fa-calendar-alt\"></i> September 4, 2026",
+            "blog-date-8": "<i class=\"far fa-calendar-alt\"></i> September 3, 2026",
+            "blog-date-9": "<i class=\"far fa-calendar-alt\"></i> September 2, 2026",
+            "blog-date-10": "<i class=\"far fa-calendar-alt\"></i> September 1, 2026",
+            "blog-date-11": "<i class=\"far fa-calendar-alt\"></i> August 30, 2026",
+            "blog-date-12": "<i class=\"far fa-calendar-alt\"></i> August 28, 2026",
+            "blog-date-13": "<i class=\"far fa-calendar-alt\"></i> August 25, 2026",
+            "blog-date-14": "<i class=\"far fa-calendar-alt\"></i> August 22, 2026",
+            "blog-date-15": "<i class=\"far fa-calendar-alt\"></i> August 20, 2026",
+            "blog-date-16": "<i class=\"far fa-calendar-alt\"></i> August 18, 2026",
+            "footer-address-text": "Onder Mah. Serince Sk. 6/B, Siteler, Ankara, Turkey",
+            "sidebar-author-title": "Elizi Craftsmanship",
+            "sidebar-author-desc": "Based in Ankara Siteler's rich woodcraft heritage, we manufacture bespoke fixed and loose furniture for living spaces worldwide.",
+            "sidebar-cta-title": "Free Discovery & Consultation",
+            "sidebar-cta-desc": "Contact us for on-site measurement, material selection, and architectural millwork consultation for local and international projects.",
+            "sidebar-cta-btn": "<i class=\"fa-solid fa-phone\"></i> +90 536 894 60 08",
+            "sidebar-recent-title": "Featured Topics",
+            "sidebar-other-title": "Featured Guides",
+            "post-breadcrumb-home": "Home",
+            "post-breadcrumb-blog": "Blog",
+            "post-read-time-5": "<i class=\"far fa-clock\"></i> 5 Min Read",
+            "post-read-time-6": "<i class=\"far fa-clock\"></i> 6 Min Read",
+            "post-read-time-7": "<i class=\"far fa-clock\"></i> 7 Min Read",
+            "post-read-time-8": "<i class=\"far fa-clock\"></i> 8 Min Read",
+            "blog-cat-7": "Bespoke Millwork",
+            "blog-t-7": "Luxury Bespoke Furniture Manufacturing in Turkey: Architectural Millwork for Global Projects",
+            "blog-exc-7": "Discover how Elizi Dizayn delivers turnkey luxury bespoke furniture and architectural millwork from Turkey to prestigious residential and commercial projects worldwide.",
+            "blog-author-7": "<i class=\"far fa-user\"></i> Elizi Architectural Desk",
+            "blog-cat-8": "Executive Suites",
+            "blog-t-8": "Handcrafted Executive Office Desks & Luxury Boardroom Furniture for Global Headquarters",
+            "blog-exc-8": "Sculptural executive desks and monumental boardroom tables handcrafted from solid walnut, marble, and brushed brass for corporate leaders worldwide.",
+            "blog-author-8": "<i class=\"far fa-user\"></i> Elizi Executive Studio",
+            "blog-cat-9": "Wall Cladding",
+            "blog-t-9": "Architectural Wooden Wall Cladding & Fluted Acoustic Paneling: Modern Luxury Trends",
+            "blog-exc-9": "A comprehensive guide to bespoke wooden wall cladding, fluted architectural panels, concealed pivot doors, and integrated LED timber paneling.",
+            "blog-author-9": "<i class=\"far fa-user\"></i> Elizi Architectural Desk",
+            "blog-cat-10": "Villa Projects",
+            "blog-t-10": "Turnkey Architectural Millwork & Custom Joinery for Luxury Villas in Dubai and London",
+            "blog-exc-10": "Discover turnkey interior woodwork for luxury villas and penthouses in Dubai, London, and Europe. Custom joinery, walk-in closets, and architectural paneling.",
+            "blog-author-10": "<i class=\"far fa-user\"></i> Elizi Export Division",
+            "blog-cat-11": "Dining Collections",
+            "blog-t-11": "Master-Crafted Solid Oak & Walnut Dining Tables: Artisanal Turkish Woodworking",
+            "blog-exc-11": "Explore bespoke solid walnut and oak dining tables by Elizi Dizayn. Handcrafted natural live-edge and geometric tables designed for luxury dining spaces.",
+            "blog-author-11": "<i class=\"far fa-user\"></i> Elizi Master Craftsmen",
+            "blog-cat-12": "Wardrobes & Closets",
+            "blog-t-12": "Bespoke Walk-in Closets & Luxury Dressing Room Systems for Prestigious Residences",
+            "blog-exc-12": "Design bespoke walk-in closets and dressing rooms with Elizi Dizayn. Smoked glass, Italian hardware, leather-wrapped drawers, and custom timber cabinetry.",
+            "blog-author-12": "<i class=\"far fa-user\"></i> Elizi Interior Architecture",
+            "blog-cat-13": "Commercial Spaces",
+            "blog-t-13": "Contemporary Reception Desks & Architectural Lobby Millwork for Corporate Buildings",
+            "blog-exc-13": "Custom reception desks and welcoming lobby architecture by Elizi Dizayn. Handcrafted oak, integrated LEDs, and stone combinations for premier commercial spaces.",
+            "blog-author-13": "<i class=\"far fa-user\"></i> Elizi Corporate Projects",
+            "blog-cat-14": "Bathroom Vanities",
+            "blog-t-14": "Custom Moisture-Resistant Wood Bathroom Vanities & Floating Credenzas",
+            "blog-exc-14": "Discover bespoke moisture-resistant wood bathroom vanities by Elizi Dizayn. Fluted teak, oak, natural marble countertops, and integrated LED backlit mirrors.",
+            "blog-author-14": "<i class=\"far fa-user\"></i> Elizi Bespoke Millwork",
+            "blog-cat-15": "Industry Insights",
+            "blog-t-15": "Why Global Interior Designers & Architects Source Bespoke Millwork from Turkey",
+            "blog-exc-15": "Learn why leading interior design studios in the UK, UAE, and Europe partner with Turkish custom furniture manufacturers like Elizi Dizayn for high-end projects.",
+            "blog-author-15": "<i class=\"far fa-user\"></i> Elizi Global Network",
+            "blog-cat-16": "Materials Guide",
+            "blog-t-16": "Premium Hardwood Guide for Bespoke Millwork: Walnut, Oak, and Natural Architectural Veneers",
+            "blog-exc-16": "An architectural guide to selecting premium hardwoods for bespoke furniture and millwork: American Walnut, European Oak, and exotic natural timber veneers.",
+            "blog-author-16": "<i class=\"far fa-user\"></i> Elizi Materials Studio"
         },
         tr: {
             "header-subbrand": "DİZAYN",
@@ -245,7 +318,80 @@ document.addEventListener('DOMContentLoaded', () => {
             "blog-cat-5": "TV Üniteleri",
             "blog-author-5": "<i class=\"far fa-user\"></i> Mobilya Tasarım",
             "blog-cat-6": "Duvar Panelleri",
-            "blog-author-6": "<i class=\"far fa-user\"></i> Duvar Dekorasyonu"
+            "blog-author-6": "<i class=\"far fa-user\"></i> Duvar Dekorasyonu",
+            "blog-t-4": "Ankara Gömme Dolap ve Giyinme Odası Tasarım Rehberi",
+            "blog-t-5": "Ankara Modern TV Ünitesi Modelleri: Ahşap ve Lüks Detaylar",
+            "blog-t-6": "Ankara Ahşap Duvar Paneli Modelleri ile Duvar Dekorasyonu",
+            "blog-date-1": "<i class=\"far fa-calendar-alt\"></i> 11 Ağustos 2026",
+            "blog-date-2": "<i class=\"far fa-calendar-alt\"></i> 10 Ağustos 2026",
+            "blog-date-3": "<i class=\"far fa-calendar-alt\"></i> 9 Ağustos 2026",
+            "blog-date-4": "<i class=\"far fa-calendar-alt\"></i> 7 Ağustos 2026",
+            "blog-date-5": "<i class=\"far fa-calendar-alt\"></i> 5 Ağustos 2026",
+            "blog-date-6": "<i class=\"far fa-calendar-alt\"></i> 3 Ağustos 2026",
+            "blog-date-7": "<i class=\"far fa-calendar-alt\"></i> 4 Eylül 2026",
+            "blog-date-8": "<i class=\"far fa-calendar-alt\"></i> 3 Eylül 2026",
+            "blog-date-9": "<i class=\"far fa-calendar-alt\"></i> 2 Eylül 2026",
+            "blog-date-10": "<i class=\"far fa-calendar-alt\"></i> 1 Eylül 2026",
+            "blog-date-11": "<i class=\"far fa-calendar-alt\"></i> 30 Ağustos 2026",
+            "blog-date-12": "<i class=\"far fa-calendar-alt\"></i> 28 Ağustos 2026",
+            "blog-date-13": "<i class=\"far fa-calendar-alt\"></i> 25 Ağustos 2026",
+            "blog-date-14": "<i class=\"far fa-calendar-alt\"></i> 22 Ağustos 2026",
+            "blog-date-15": "<i class=\"far fa-calendar-alt\"></i> 20 Ağustos 2026",
+            "blog-date-16": "<i class=\"far fa-calendar-alt\"></i> 18 Ağustos 2026",
+            "footer-address-text": "Önder, Serince Sk. 6/b, 06360 Altındağ / Ankara",
+            "sidebar-author-title": "Elizi Zanaatkarlık",
+            "sidebar-author-desc": "Ankara Siteler'in köklü ahşap işçiliği geleneğiyle, yaşam alanlarınıza özel sabit ve hareketli mobilyalar üretiyoruz.",
+            "sidebar-cta-title": "Ücretsiz Keşif Alın",
+            "sidebar-cta-desc": "Ankara içi ve uluslararası projelerinizde yerinde ölçü, malzeme seçimi ve bütünsel tasarım danışmanlığı için bize ulaşın.",
+            "sidebar-cta-btn": "<i class=\"fa-solid fa-phone\"></i> +90 536 894 60 08",
+            "sidebar-recent-title": "Öne Çıkan Başlıklar",
+            "sidebar-other-title": "Diğer Rehberler",
+            "post-breadcrumb-home": "Ana Sayfa",
+            "post-breadcrumb-blog": "Blog",
+            "post-read-time-5": "<i class=\"far fa-clock\"></i> 5 Dakika Okuma",
+            "post-read-time-6": "<i class=\"far fa-clock\"></i> 6 Dakika Okuma",
+            "post-read-time-7": "<i class=\"far fa-clock\"></i> 7 Dakika Okuma",
+            "post-read-time-8": "<i class=\"far fa-clock\"></i> 8 Dakika Okuma",
+            "blog-cat-7": "Mimari Ahşap",
+            "blog-t-7": "Türkiye'de Lüks Özel Mobilya Üretimi: Küresel Projeler İçin Mimari Ahşap İmalatı",
+            "blog-exc-7": "Elizi Dizayn'ın Türkiye'den dünyanın dört bir yanındaki lüks konut ve ticari projelere anahtar teslim mimari ahşap mobilya ihracatı.",
+            "blog-author-7": "<i class=\"far fa-user\"></i> Elizi Mimarlık",
+            "blog-cat-8": "Makam Odası",
+            "blog-t-8": "El Yapımı Yönetici Makam Masaları ve Lüks Toplantı Masası Çözümleri",
+            "blog-exc-8": "Kurumsal liderler için masif ceviz, mermer ve fırçalanmış pirinçle üretilen heykelsi makam masaları ve anıtsal toplantı masaları.",
+            "blog-author-8": "<i class=\"far fa-user\"></i> Elizi Yönetici Stüdyosu",
+            "blog-cat-9": "Duvar Kaplama",
+            "blog-t-9": "Mimari Ahşap Duvar Giydirme ve Çıtalı Akustik Panelleme Trendleri",
+            "blog-exc-9": "Özel ahşap duvar kaplamaları, akustik çıtalar, gizli pivot kapılar ve entegre LED ahşap paneller için kapsamlı mimari rehber.",
+            "blog-author-9": "<i class=\"far fa-user\"></i> Elizi Mimarlık",
+            "blog-cat-10": "Villa Projeleri",
+            "blog-t-10": "Dubai ve Londra'da Lüks Villalar İçin Anahtar Teslim Ahşap İmalatı ve Mobilya",
+            "blog-exc-10": "Dubai, Londra ve Avrupa'daki lüks villalar ve rezidanslar için anahtar teslim iç mimari ahşap işçiliği, giyinme odaları ve panelleme.",
+            "blog-author-10": "<i class=\"far fa-user\"></i> Elizi İhracat Departmanı",
+            "blog-cat-11": "Yemek Masaları",
+            "blog-t-11": "Usta İşi Masif Meşe ve Ceviz Yemek Masaları: Geleneksel Ahşap Zanaatı",
+            "blog-exc-11": "Elizi Dizayn'ın el yapımı masif ceviz ve meşe yemek masaları. Lüks yemek alanları için doğal kenarlı ve heykelsi masalar.",
+            "blog-author-11": "<i class=\"far fa-user\"></i> Elizi Usta Zanaatkarlar",
+            "blog-cat-12": "Giyinme Odası",
+            "blog-t-12": "Lüks Konutlar İçin Özel Tasarım Giyinme Odası ve Gömme Dolap Sistemleri",
+            "blog-exc-12": "Füme cam kapaklar, İtalyan donanımlar, deri kaplı çekmeceler ve özel aydınlatmalı lüks giyinme odası tasarımları.",
+            "blog-author-12": "<i class=\"far fa-user\"></i> Elizi İç Mimari",
+            "blog-cat-13": "Ticari Alanlar",
+            "blog-t-13": "Modern Binalar İçin Çağdaş Karşılama Bankosu ve Lobi Ahşap Mimarisi",
+            "blog-exc-13": "Özel üretim lüks karşılama bankoları ve lobi ahşap mimarisi. Masif meşe, gizli LED'ler ve taş kombinasyonları.",
+            "blog-author-13": "<i class=\"far fa-user\"></i> Elizi Kurumsal Projeler",
+            "blog-cat-14": "Banyo Projeleri",
+            "blog-t-14": "Suya Dayanıklı Özel Ahşap Banyo Dolapları ve Yüzen Konsollar",
+            "blog-exc-14": "Neme dayanıklı tik ve meşe kaplamalar, doğal mermer tezgahlar ve LED aydınlatmalı aynalarla banyonuza lüks dokunuşlar.",
+            "blog-author-14": "<i class=\"far fa-user\"></i> Elizi Özel İmalat",
+            "blog-cat-15": "Sektörel Bakış",
+            "blog-t-15": "Uluslararası İç Mimarlar Neden Özel Ahşap İmalatını Türkiye'den Tedarik Ediyor?",
+            "blog-exc-15": "İngiltere, Körfez ve Avrupa'daki lider iç mimarlık stüdyolarının yüksek kaliteli projeler için neden Elizi Dizayn'ı tercih ettiğini keşfedin.",
+            "blog-author-15": "<i class=\"far fa-user\"></i> Elizi Global",
+            "blog-cat-16": "Malzeme Rehberi",
+            "blog-t-16": "Özel Ahşap İmalatında Birinci Sınıf Kereste Rehberi: Ceviz, Meşe ve Doğal Kaplamalar",
+            "blog-exc-16": "Amerikan cevizi, Avrupa meşesi ve egzotik doğal kaplamalar hakkında mimarlar ve tasarımcılar için kapsamlı ahşap rehberi.",
+            "blog-author-16": "<i class=\"far fa-user\"></i> Elizi Malzeme Laboratuvarı"
         }
     };
 
@@ -255,6 +401,29 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('eliziLang', lang);
         if (langToggle) {
             langToggle.textContent = lang === 'tr' ? 'EN' : 'TR';
+            langToggle.setAttribute('aria-label', lang === 'tr' ? 'Switch to English' : 'Türkçe Diline Geç');
+        }
+        
+        // Update document language attribute
+        document.documentElement.lang = lang;
+
+        // Dynamic Document Title based on route
+        const path = window.location.pathname.toLowerCase();
+        const isBlogIndex = path === '/blog/' || path === '/blog' || path.endsWith('/blog/index.html');
+        const isHome = path === '/' || path === '/index.html' || path === '';
+
+        if (lang === 'en') {
+            if (isBlogIndex) {
+                document.title = "Blog & Craftsmanship Guide | Elizi Dizayn & Mobilya";
+            } else if (isHome) {
+                document.title = "Elizi Dizayn & Mobilya | Bespoke Luxury Woodwork & Joinery";
+            }
+        } else {
+            if (isBlogIndex) {
+                document.title = "Blog & Zanaat Rehberi | Elizi Dizayn & Mobilya";
+            } else if (isHome) {
+                document.title = "Elizi Dizayn & Mobilya | Kişiye Özel Lüks Tasarımlar";
+            }
         }
         
         // Translate all elements with data-translate attribute
@@ -265,7 +434,23 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Translate placeholders of inputs
+        // Translate specific aria-labels
+        const floatingPhone = document.querySelector('.floating-phone');
+        if (floatingPhone) {
+            floatingPhone.setAttribute('aria-label', lang === 'en' ? 'Call Us: +90 536 894 60 08' : 'Telefonla Arayın: +90 536 894 60 08');
+        }
+
+        const mobBtn = document.getElementById('mobileMenuBtn');
+        if (mobBtn) {
+            mobBtn.setAttribute('aria-label', lang === 'en' ? 'Toggle Navigation Menu' : 'Menüyü Aç');
+        }
+
+        const popupClose = document.getElementById('emailPopupClose');
+        if (popupClose) {
+            popupClose.setAttribute('aria-label', lang === 'en' ? 'Close' : 'Kapat');
+        }
+
+        // Translate input placeholders
         const nameInput = document.getElementById('form-name');
         const phoneInput = document.getElementById('form-phone');
         const emailInput = document.getElementById('form-email');
