@@ -144,4 +144,66 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Ankara High-Intent Local SEO & Woodwork Guides -->
+  <url>
+    <loc>https://www.elizidizaynmobilya.com/blog/ankara-ozel-tasarim-mobilya-fiyatlari-rehberi/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.elizidizaynmobilya.com/blog/ozel-olcu-mobilya-nasil-yapilir-siteler-mobilya-rehberi/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.elizidizaynmobilya.com/blog/masif-ahsap-mi-mdf-mi-ozel-tasarim-mobilya-ahsap-turleri/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.elizidizaynmobilya.com/blog/ankara-villa-mobilyasi-cayyolu-incek-umitkoy-rehberi/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.elizidizaynmobilya.com/blog/ankara-ozel-tasarim-mutfak-fiyatlari-ozel-olcu-avantajlari/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.elizidizaynmobilya.com/blog/mutfak-dolabinda-hangi-malzeme-kullanilmali-lake-mi-ahsap-mi/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.elizidizaynmobilya.com/blog/ankara-ofis-dekorasyonu-kurumsal-ofis-mobilyalari-imalati/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.elizidizaynmobilya.com/blog/ankara-yonetici-odasi-tasarimi-ozel-uretim-makam-masasi/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.elizidizaynmobilya.com/blog/ankara-mobilya-imalati-siteler-atolye-sureci/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.elizidizaynmobilya.com/blog/ankara-luks-banyo-dolabi-ozel-ahsap-banyo-mobilyalari/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
 </urlset>

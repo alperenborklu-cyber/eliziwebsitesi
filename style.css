@@ -364,6 +364,16 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.15;
 }
 
+.hero-title-sub {
+    display: block;
+    font-size: 0.72em;
+    color: var(--accent);
+    letter-spacing: 0.5px;
+    margin-top: 8px;
+    font-style: italic;
+    font-weight: 300;
+}
+
 .hero-desc {
     font-size: 1.1rem;
     color: var(--text-secondary);
@@ -2554,4 +2564,98 @@ body.dark-theme .experience-badge .text {
     white-space: nowrap;
     border-width: 0;
 }
+
+/* ==========================================================================
+   Process Section / Özel Üretim Süreci
+   ========================================================================== */
+.process-section {
+    padding: 100px 0;
+    background-color: var(--bg-primary);
+    position: relative;
+    border-top: 1px solid var(--border-color);
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+    margin-top: 60px;
+}
+
+.process-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 35px 25px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: transform var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.process-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.process-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.process-num {
+    font-family: var(--font-title);
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: var(--accent);
+    line-height: 1;
+}
+
+.process-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, var(--accent), transparent);
+    margin-left: 15px;
+    opacity: 0.4;
+}
+
+.process-card-title {
+    font-family: var(--font-title);
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: var(--text-primary);
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.process-card-desc {
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    font-weight: 300;
+}
+
+@media (max-width: 1200px) {
+    .process-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .process-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 40px;
+    }
+    .process-section {
+        padding: 70px 0;
+    }
+    .process-card {
+        padding: 25px 20px;
+    }
+}
+
 
