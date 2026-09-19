@@ -99,6 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "contact-c-desc-1": "Onder Mah. Serince Sok. No:6/B<br>Siteler, Altindag / Ankara",
             "contact-c-title-2": "Phone & Contact",
             "contact-c-title-3": "Email Address",
+            "contact-c-title-instagram": "Instagram",
             "contact-wa-btn": "<i class=\"fab fa-whatsapp\"></i> Get a Quick Quote via WhatsApp",
             "form-title": "Custom Design Request",
             "form-desc": "Describe your dream design, upload technical drawings or reference images, and we will prepare a custom quote for you as soon as possible.",
