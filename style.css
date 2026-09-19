@@ -345,7 +345,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-content {
-    max-width: 620px;
+    max-width: 860px;
 }
 
 .hero-tagline {
@@ -359,18 +359,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-title {
-    font-size: 4.2rem;
+    font-size: clamp(2.4rem, 4.3vw, 4.2rem);
     font-weight: 300;
     margin-bottom: 25px;
-    line-height: 1.15;
+    line-height: 1.18;
+}
+
+.hero-title-main {
+    display: block;
+    white-space: nowrap;
 }
 
 .hero-title-sub {
     display: block;
-    font-size: 0.72em;
+    white-space: nowrap;
+    font-size: clamp(1.15rem, 1.85vw, 1.75rem);
     color: var(--accent);
     letter-spacing: 0.5px;
-    margin-top: 8px;
+    margin-top: 10px;
     font-style: italic;
     font-weight: 300;
 }
@@ -380,6 +386,7 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--text-secondary);
     margin-bottom: 40px;
     font-weight: 300;
+    max-width: 640px;
 }
 
 .hero-actions-group {
@@ -2226,7 +2233,10 @@ body.dark-theme .post-nav-link:hover {
 /* --- Responsive Adjustments --- */
 @media (max-width: 1024px) {
     .hero-title {
-        font-size: 3.2rem;
+        font-size: clamp(2.1rem, 3.8vw, 3.2rem);
+    }
+    .hero-title-sub {
+        font-size: clamp(1rem, 1.8vw, 1.4rem);
     }
     .craftsmanship-content {
         flex-direction: column;
@@ -2293,7 +2303,12 @@ body.dark-theme .post-nav-link:hover {
         padding: 0 15px;
     }
     .hero-title {
-        font-size: 2.6rem;
+        font-size: clamp(1.75rem, 6.2vw, 2.3rem);
+        line-height: 1.25;
+    }
+    .hero-title-sub {
+        font-size: clamp(0.85rem, 3.8vw, 1.15rem);
+        margin-top: 6px;
     }
     .hero-desc {
         font-size: 1rem;
