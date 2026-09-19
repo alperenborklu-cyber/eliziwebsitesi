@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&display=swap');
+
 /* --- Design Tokens & Variables --- */
 :root {
     --bg-primary: #ffffff;
@@ -11,6 +13,7 @@
     --accent-dark: #5d4037;
     --border-color: #eae5dd;
     --border-light: #f3efe9;
+    --font-brand: 'Cinzel', serif;
     --font-heading: 'Cormorant Garamond', serif;
     --font-body: 'Inter', sans-serif;
     --transition-smooth: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
@@ -202,22 +205,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .brand-text {
-    font-family: var(--font-heading);
-    font-size: 1.6rem;
+    font-family: var(--font-brand, 'Cinzel', serif);
+    font-size: 1.35rem;
     font-weight: 600;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.16em;
     color: var(--text-primary);
     text-transform: uppercase;
+    white-space: nowrap;
+    transition: var(--transition-quick);
 }
 
 .sub-brand {
-    font-size: 1rem;
-    font-family: var(--font-body);
-    font-weight: 300;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
     color: var(--accent);
-    letter-spacing: 0.2em;
     display: inline-block;
-    margin-left: 2px;
+    margin-left: 0;
 }
 
 .nav-menu {
@@ -1391,22 +1396,23 @@ body.dark-theme .experience-badge .text {
 }
 
 .footer-brand-title {
-    font-family: var(--font-heading);
-    font-size: 1.8rem;
+    font-family: var(--font-brand, 'Cinzel', serif);
+    font-size: 1.45rem;
     font-weight: 600;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.16em;
     color: #ffffff;
     align-self: flex-start;
+    white-space: nowrap;
 }
 
 .footer-sub-brand {
-    font-size: 1.05rem;
-    font-family: var(--font-body);
-    font-weight: 300;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
     color: var(--accent);
-    letter-spacing: 0.15em;
     display: inline-block;
-    margin-left: 2px;
+    margin-left: 0;
 }
 
 .footer-brand p {
@@ -2309,6 +2315,10 @@ body.dark-theme .post-nav-link:hover {
     .hero-title-sub {
         font-size: clamp(0.85rem, 3.8vw, 1.15rem);
         margin-top: 6px;
+    }
+    .brand-text {
+        font-size: 1.15rem;
+        letter-spacing: 0.12em;
     }
     .hero-desc {
         font-size: 1rem;
