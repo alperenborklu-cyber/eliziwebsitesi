@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "floating-cta": "<svg class=\"icon-svg\"><use href=\"#icon-calendar-check\"></use></svg> Free Consultation",
             "preloader-subtitle": "The Unique Print of Craftsmanship",
             "nav-home": "Home",
+            "nav-ref-projects": "Reference Projects",
             "nav-collections": "Collections",
             "nav-craftsmanship": "Craftsmanship",
             "nav-blog": "Blog",
@@ -31,6 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
             "hl-desc-2": "We use premium oak, walnut, natural veneers, and high-quality wood panel components.",
             "hl-title-3": "Project-Based Production",
             "hl-desc-3": "Instead of retail product sales, we handle all custom fixed and loose woodwork needed for your space.",
+            "ref-badge": "ARCHITECTURAL SOLUTIONS",
+            "ref-teaser-title": "Reference Projects",
+            "ref-teaser-desc": "Explore our completed architectural joinery and bespoke woodwork projects, from modern villa penthouses to prestigious corporate headquarters, real estate offices, and custom dressing suites.",
+            "ref-btn-explore": "<span>Explore Reference Projects</span> <svg class=\"icon-svg\" aria-hidden=\"true\"><use href=\"#icon-arrow-right\"></use></svg>",
             "coll-subtitle": "PREMIUM SELECTION",
             "coll-title": "Elizi Collections",
             "port-desc-1": "Custom reception desks and wood paneling designed with integrated lighting for modern lobbies and office spaces.",
@@ -182,6 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "footer-desc": "Craft rising from Siteler,<br>flawless comfort in your home.",
             "footer-h-links": "Quick Links",
             "footer-nav-home": "Elizi Home",
+            "footer-nav-ref-projects": "Reference Projects",
             "footer-nav-collections": "Bespoke Collections",
             "footer-nav-blog": "Blog & Guides",
             "footer-nav-contact": "Contact Us",
@@ -332,6 +338,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "floating-cta": "<svg class=\"icon-svg\"><use href=\"#icon-calendar-check\"></use></svg> Ücretsiz Keşif Randevusu",
             "preloader-subtitle": "Zanaatın Benzersiz İzi",
             "nav-home": "Ana Sayfa",
+            "nav-ref-projects": "Referans Projeler",
             "nav-collections": "Koleksiyonlar",
             "nav-craftsmanship": "Ustalık",
             "nav-blog": "Blog",
@@ -347,6 +354,10 @@ document.addEventListener('DOMContentLoaded', () => {
             "hl-desc-2": "Birinci sınıf meşe, ceviz, doğal kaplama ve birinci kalite ahşap panel bileşenleri kullanıyoruz.",
             "hl-title-3": "Proje Bazlı Üretim",
             "hl-desc-3": "Tekli ürün satışı yerine, mekanınız için gerekli tüm sabit ve hareketli ahşap imalatını üstleniyoruz.",
+            "ref-badge": "MİMARİ ÇÖZÜM ORTAKLIĞI",
+            "ref-teaser-title": "Referans Projelerimiz",
+            "ref-teaser-desc": "Modern villa çatı dublekslerinden gayrimenkul ve kurumsal genel merkez makam suitlerine, açık ofis sistemlerinden özel koleksiyon odalarına kadar Siteler zanaatkarlığıyla tamamladığımız mimari referans projelerimizi keşfedin.",
+            "ref-btn-explore": "<span>Referans Projeleri İnceleyin</span> <svg class=\"icon-svg\" aria-hidden=\"true\"><use href=\"#icon-arrow-right\"></use></svg>",
             "coll-subtitle": "PREMIUM SEÇKİ",
             "coll-title": "Elizi Koleksiyonları",
             "port-desc-1": "Lobi ve karşılama alanları için özel üretilen masif meşe detaylı bankolar, gizli LED aydınlatmalı duvar panelleri ve bütünsel mimari çözümler.",
@@ -486,6 +497,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "footer-desc": "Siteler'den yükselen zanaat,<br>evinizdeki kusursuz konfor.",
             "footer-h-links": "Hızlı Erişim",
             "footer-nav-home": "Elizi Ana Sayfa",
+            "footer-nav-ref-projects": "Referans Projeler",
             "footer-nav-collections": "Özel Koleksiyonlar",
             "footer-nav-blog": "Blog & Rehberler",
             "footer-nav-contact": "Bize Ulaşın",
@@ -969,6 +981,22 @@ document.addEventListener('DOMContentLoaded', () => {
             lightbox.style.display = 'none';
             document.body.style.overflow = 'auto';
         }
+    });
+
+    // Trigger Lightbox for Reference Project Cards
+    document.querySelectorAll('.ref-image-card').forEach(card => {
+        card.addEventListener('click', () => {
+            if (lightbox && lightboxImg) {
+                const fullSrc = card.getAttribute('data-full') || card.querySelector('img')?.src;
+                const caption = card.getAttribute('data-caption') || card.querySelector('img')?.alt || '';
+                lightboxImg.src = fullSrc;
+                if (lightboxCaption) {
+                    lightboxCaption.textContent = caption;
+                }
+                lightbox.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
+        });
     });
 
     // --- Smooth Scroll Indicator Trigger ---
